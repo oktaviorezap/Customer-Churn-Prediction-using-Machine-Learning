@@ -14,7 +14,7 @@ X = cleaned_df.drop('Churn', axis = 1)
 y = cleaned_df['Churn']
 x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 #Train the model
-rdf_model=RandomForestClassifier().fit(x_train,y_train)
-print(rdf_model)
+gbt_model=GradientBoostingClassifier().fit(x_train,y_train)
+print(gbt_model)

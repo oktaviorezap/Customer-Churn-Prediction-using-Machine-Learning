@@ -6,8 +6,7 @@
 <br>
 <br>
 <br> **Solution Problem:**
-<br>As a data scientist, I am asked to create the right model.
-<br>In this assignment, I will do Machine Learning Modeling using June 2020 data.
+<br>As a data scientist, I am asked to create the right model. In this assignment, I will do Machine Learning Modeling using June 2020 data.
 <br>
 <br>The steps that will be taken are:
 1.    Perform Exploratory Data Analysis

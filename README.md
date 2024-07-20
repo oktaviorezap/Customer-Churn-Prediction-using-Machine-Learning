@@ -22,7 +22,7 @@
 # Dataset
 <br>**Dataset Link:** https://storage.googleapis.com/dqlab-dataset/dqlab_telco_final.csv
 <br>
-<br>Untuk detil datanya adalah sebagai berikut:
+<br>Dataset details as follows:
 
 1. UpdatedAt Periode of Data taken
 2. customerID Customer ID

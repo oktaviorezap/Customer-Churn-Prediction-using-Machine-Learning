@@ -9,7 +9,7 @@
 <br>As a data scientist, I am asked to create the right model. In this assignment, I will do Machine Learning Modeling using June 2020 data.
 <br>
 <br>The steps that will be taken are:
-1.    Perform Exploratory Data Analysis
+1.    Perform Exploratory Data Analysis (EDA)
 2.    Perform Data Pre-Processing
 3.    Performing Machine Learning Modeling
 4.    Determining the Best Model

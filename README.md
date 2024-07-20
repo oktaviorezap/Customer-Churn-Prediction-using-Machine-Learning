@@ -15,7 +15,7 @@
 4.    Determining the Best Model
 
 # Dataset
-<br>**Dataset Link:** https://storage.googleapis.com/dqlab-dataset/dqlab_telco_final.csv
+**Dataset Link:** https://storage.googleapis.com/dqlab-dataset/dqlab_telco_final.csv
 <br>
 <br>Dataset details as follows:
 

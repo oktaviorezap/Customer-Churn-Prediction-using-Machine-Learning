@@ -15,7 +15,7 @@
 4.    Determining the Best Model
 
 # Project Result
-<br>Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/Data_Cleansing_and_Customer_Churn_Prediction_using_Machine_Learning_DQLab.ipynb)
+Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/Data_Cleansing_and_Customer_Churn_Prediction_using_Machine_Learning_DQLab.ipynb)
 <br>
 <br> **Number of Churn Customer before Predicted:**
 

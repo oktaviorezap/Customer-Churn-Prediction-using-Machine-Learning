@@ -13,7 +13,7 @@
 2.    Perform Data Pre-Processing
 3.    Performing Machine Learning Modeling
 4.    Determining the Best Model
-<br>
+
 # Project Result
 <br>Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/Data_Cleansing_and_Customer_Churn_Prediction_using_Machine_Learning_DQLab.ipynb)
 <br>

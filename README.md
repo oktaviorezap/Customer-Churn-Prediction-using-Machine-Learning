@@ -13,3 +13,29 @@
 2.    Perform Data Pre-Processing
 3.    Performing Machine Learning Modeling
 4.    Determining the Best Model
+<br>
+<br>
+<br>**Project Result:**
+<br>Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/Data_Cleansing_and_Customer_Churn_Prediction_using_Machine_Learning_DQLab.ipynb)
+<br>
+<br>**Number of Churn Customer before Predicted :**
+<br>
+# Dataset
+<br>**Dataset Link: **https://storage.googleapis.com/dqlab-dataset/dqlab_telco_final.csv
+<br>
+<br>Untuk detil datanya adalah sebagai berikut:
+
+1. UpdatedAt Periode of Data taken
+2. customerID Customer ID
+3. gender Whether the customer is a male or a female (Male, Female)
+4. SeniorCitizen Whether the customer is a senior citizen or not (Yes, No)
+5. Partner Whether the customer has a partner or not (Yes, No)
+6. tenure Number of months the customer has stayed with the company
+7. PhoneService Whether the customer has a phone service or not (Yes, No)
+8. InternetService Customer’s internet service provider (Yes, No)
+9. StreamingTV Whether the customer has streaming TV or not (Yes, No)
+10. PaperlessBilling Whether the customer has paperless billing or not (Yes, No)
+11. MonthlyCharges The amount charged to the customer monthly
+12. TotalCharges The total amount charged to the customer
+13. Churn Whether the customer churned or not (Yes, No)
+

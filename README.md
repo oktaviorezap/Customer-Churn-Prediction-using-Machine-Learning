@@ -20,7 +20,7 @@
 <br> **Number of Churn Customer before Predicted:**
 
 #Dataset
-**Dataset Link:** https://storage.googleapis.com/dqlab-dataset/dqlab_telco_final.csv
+<br>**Dataset Link:** https://storage.googleapis.com/dqlab-dataset/dqlab_telco_final.csv
 <br>
 <br>Untuk detil datanya adalah sebagai berikut:
 

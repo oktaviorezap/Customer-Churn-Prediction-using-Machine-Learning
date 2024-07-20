@@ -17,7 +17,12 @@
 # Project Result
 Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/DQLab%20-%20Customer%20Churn%20Prediction%20Using%20Machine%20Learning.ipynb)
 <br>
-<br> **Number of Churn Customer before Predicted:**
+<br> **Number of Churn Customer Before Predicted:**
+<br>![image](https://github.com/user-attachments/assets/f6b11ed2-fe8e-4463-a1c2-2f2d387300e0)
+<br>
+<br>
+<br> **Number of Churn Customer After Predicted:**
+<br>![image](https://github.com/user-attachments/assets/65403b17-cdb4-4095-b0cc-5da37f0c22a5)
 
 # Dataset
 <br>**Dataset Link:** https://storage.googleapis.com/dqlab-dataset/dqlab_telco_final.csv

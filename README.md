@@ -95,9 +95,10 @@ The **Gradient Boosting Classifier** model was the best choice of these three mo
 Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/DQLab%20-%20Customer%20Churn%20Prediction%20Using%20Machine%20Learning.ipynb)
 <br>
 <br> **Number of Churn Customer Before Predicted:**
-<br>![image](https://github.com/user-attachments/assets/f6b11ed2-fe8e-4463-a1c2-2f2d387300e0)
+<br>![image](https://github.com/user-attachments/assets/660f78c6-e4c7-49b0-b6ff-a1485ccc7841)
 <br>
 <br>
 <br> **Number of Churn Customer After Predicted:**
-<br>![image](https://github.com/user-attachments/assets/65403b17-cdb4-4095-b0cc-5da37f0c22a5)
+<br>![image](https://github.com/user-attachments/assets/aed6aa79-88f4-4c54-aab2-15df7689bb7d)
+
 

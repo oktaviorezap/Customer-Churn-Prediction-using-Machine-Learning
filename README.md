@@ -67,13 +67,14 @@ The following is an analysis of each metric:
    <br>
    <br>
    From this, **Gradient Boosting Classifier** has the highest testing accuracy.
-   
+   <br>
 2. ROC Score:
         <br>- Random Forest: 0.677300
         <br>- Gradient Boosting Classifier: 0.691900
         <br>- Logistic Regression: 0.691500
-
-<br>**Gradient Boosting Classifier** also has the highest ROC score.
+   <br>
+   <br>
+   **Gradient Boosting Classifier** also has the highest ROC score.
 <br>
 <br>
 

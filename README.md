@@ -72,7 +72,7 @@ The following is an analysis of each metric:
         Gradient Boosting Classifier: 0.691900
         Logistic Regression: 0.691500
 
-  **Gradient Boosting Classifier** also has the highest ROC score.
+<br>**Gradient Boosting Classifier** also has the highest ROC score.
 <br>
 <br>
 

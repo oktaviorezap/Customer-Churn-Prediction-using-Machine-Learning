@@ -56,7 +56,7 @@ The following is an analysis of each metric:
         Testing Accuracy: 0.792300
         ROC Score: 0.691500
 <br>
-**Analysis:**
+**Analysis Testing:**
 
 1. Accuracy on Testing Data:
         Random Forest: 0.773100
@@ -72,7 +72,7 @@ The following is an analysis of each metric:
 
   **Gradient Boosting Classifier** also has the highest ROC score.
 <br>
-**Overfitting:**
+**Overfitting Testing:**
 <br>
 - Random Forest has a very high training accuracy (0.995700) compared to the testing accuracy (0.773100), indicating possible overfitting.
 - Gradient Boosting Classifier has a modest training accuracy (0.816000) and a fairly good testing accuracy (0.793800), indicating a more balanced model.

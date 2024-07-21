@@ -33,7 +33,56 @@
 11. MonthlyCharges The amount charged to the customer monthly
 12. TotalCharges The total amount charged to the customer
 13. Churn Whether the customer churned or not (Yes, No)
+# Choosing and Model Implementation
+To determine the best model to predict customer churn from the three models above, we must consider several relevant metrics: 
+1. **Accuracy** on testing data
+2. **ROC** (Receiver Operating Characteristic) score. 
+<br>
 
+The following is an analysis of each metric:
+
+1. Random Forest:
+        Training Accuracy: 0.995700
+        Testing Accuracy: 0.773100
+        ROC Score: 0.677300
+
+2. Gradient Boosting Classifier:
+        Training Accuracy: 0.816000
+        Testing Accuracy: 0.793800
+        ROC Score: 0.691900
+
+3. Logistic Regression:
+        Training Accuracy: 0.795700
+        Testing Accuracy: 0.792300
+        ROC Score: 0.691500
+<br>
+**Analysis:**
+
+1. Accuracy on Testing Data:
+        Random Forest: 0.773100
+        Gradient Boosting Classifier: 0.793800
+        Logistic Regression: 0.792300
+
+  From this, **Gradient Boosting Classifier** has the highest testing accuracy.
+<br>
+2. ROC Score:
+        Random Forest: 0.677300
+        Gradient Boosting Classifier: 0.691900
+        Logistic Regression: 0.691500
+
+  **Gradient Boosting Classifier** also has the highest ROC score.
+<br>
+**Overfitting:**
+<br>
+- Random Forest has a very high training accuracy (0.995700) compared to the testing accuracy (0.773100), indicating possible overfitting.
+- Gradient Boosting Classifier has a modest training accuracy (0.816000) and a fairly good testing accuracy (0.793800), indicating a more balanced model.
+- Logistic Regression has fairly close training accuracy and testing accuracy, but slightly lower accuracy than Gradient Boosting Classifier.
+<br>
+<br>
+
+**Conclusion:**
+<br>
+The **Gradient Boosting Classifier** model was the best choice of these three models as it had the highest testing accuracy, highest ROC score, and showed no significant signs of overfitting. So the **Gradient Boosting Classifier** model was chosen as the best model to predict client’s repayment abilities.
 # Project Result
 Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/DQLab%20-%20Customer%20Churn%20Prediction%20Using%20Machine%20Learning.ipynb)
 <br>

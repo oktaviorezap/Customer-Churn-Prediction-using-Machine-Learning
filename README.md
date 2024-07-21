@@ -43,19 +43,19 @@ To determine the best model to predict customer churn from the three models abov
 The following is an analysis of each metric:
 
 1. Random Forest:
-        Training Accuracy: 0.995700
-        Testing Accuracy: 0.773100
-        ROC Score: 0.677300
+        <br>- Training Accuracy: 0.995700
+        <br>- Testing Accuracy: 0.773100
+        <br>- ROC Score: 0.677300
 
 2. Gradient Boosting Classifier:
-        Training Accuracy: 0.816000
-        Testing Accuracy: 0.793800
-        ROC Score: 0.691900
+        <br>- Training Accuracy: 0.816000
+        <br>- Testing Accuracy: 0.793800
+        <br>- ROC Score: 0.691900
 
 3. Logistic Regression:
-        Training Accuracy: 0.795700
-        Testing Accuracy: 0.792300
-        ROC Score: 0.691500
+        <br>- Training Accuracy: 0.795700
+        <br>- Testing Accuracy: 0.792300
+        <br>- ROC Score: 0.691500
 <br>
 <br>
 

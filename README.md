@@ -33,7 +33,8 @@
 11. MonthlyCharges The amount charged to the customer monthly
 12. TotalCharges The total amount charged to the customer
 13. Churn Whether the customer churned or not (Yes, No)
-# Choosing and Model Implementation
+
+# Determine Best Model
 To determine the best model to predict customer churn from the three models above, we must consider several relevant metrics: 
 1. **Accuracy** on testing data
 2. **ROC** (Receiver Operating Characteristic) score. 

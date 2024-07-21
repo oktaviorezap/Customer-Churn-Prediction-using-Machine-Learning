@@ -43,37 +43,37 @@ To determine the best model to predict customer churn from the three models abov
 The following is an analysis of each metric:
 
 1. Random Forest:
-        <br>- Training Accuracy: 0.995700
-        <br>- Testing Accuracy: 0.773100
-        <br>- ROC Score: 0.677300
+        <br>- Training Accuracy: 0.995700 (99.57%)
+        <br>- Testing Accuracy: 0.773100 (77.31%)
+        <br>- ROC Score: 0.677300 (67.73%)
 
 2. Gradient Boosting Classifier:
-        <br>- Training Accuracy: 0.816000
-        <br>- Testing Accuracy: 0.793800
-        <br>- ROC Score: 0.691900
+        <br>- Training Accuracy: 0.816000 (81.60%)
+        <br>- Testing Accuracy: 0.793800 (79.38%)
+        <br>- ROC Score: 0.691900 (69.19%)
 
 3. Logistic Regression:
-        <br>- Training Accuracy: 0.795700
-        <br>- Testing Accuracy: 0.792300
-        <br>- ROC Score: 0.691500
+        <br>- Training Accuracy: 0.795700 (79.57%)
+        <br>- Testing Accuracy: 0.792300 (79.23%)
+        <br>- ROC Score: 0.691500 (69.15%)
 <br>
 <br>
 
 **Analysis Testing:**
 
 1. Accuracy on Testing Data:
-        <br>- Random Forest: 0.773100
-        <br>- Gradient Boosting Classifier: 0.793800
-        <br>- Logistic Regression: 0.792300
+        <br>- Random Forest: 0.773100 (77.31%)
+        <br>- Gradient Boosting Classifier: 0.793800 (79.38%)
+        <br>- Logistic Regression: 0.792300 (79.23%)
    <br>
    <br>
    From this, **Gradient Boosting Classifier** has the highest testing accuracy.
    <br>
    <br>
 2. ROC Score:
-        <br>- Random Forest: 0.677300
-        <br>- Gradient Boosting Classifier: 0.691900
-        <br>- Logistic Regression: 0.691500
+        <br>- Random Forest: 0.677300 (67.73%)
+        <br>- Gradient Boosting Classifier: 0.691900 (69.19%)
+        <br>- Logistic Regression: 0.691500 (69.15%)
    <br>
    <br>
    **Gradient Boosting Classifier** also has the highest ROC score.
@@ -82,8 +82,8 @@ The following is an analysis of each metric:
 
 **Overfitting Testing:**
 <br>
-- Random Forest has a very high training accuracy (0.995700) compared to the testing accuracy (0.773100), indicating possible overfitting.
-- Gradient Boosting Classifier has a modest training accuracy (0.816000) and a fairly good testing accuracy (0.793800), indicating a more balanced model.
+- Random Forest has a very high training accuracy (99.57%) compared to the testing accuracy (77.31%), indicating possible overfitting.
+- Gradient Boosting Classifier has a modest training accuracy (81.60%) and a fairly good testing accuracy (79.38%), indicating a more balanced model.
 - Logistic Regression has fairly close training accuracy and testing accuracy, but slightly lower accuracy than Gradient Boosting Classifier.
 <br>
 <br>
@@ -95,10 +95,8 @@ The **Gradient Boosting Classifier** model was the best choice of these three mo
 Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/(Full%20Code)%20DQLab%20-%20Customer%20Churn%20Prediction%20Using%20Machine%20Learning.ipynb)
 <br>
 <br> **Number of Churn Customer Before Predicted:**
-<br>![image](https://github.com/user-attachments/assets/660f78c6-e4c7-49b0-b6ff-a1485ccc7841)
+<br>![image](https://github.com/user-attachments/assets/0210caae-e058-4ba0-ab97-bec531d54909)
 <br>
 <br>
 <br> **Number of Churn Customer After Predicted:**
-<br>![image](https://github.com/user-attachments/assets/aed6aa79-88f4-4c54-aab2-15df7689bb7d)
-
-
+<br>![image](https://github.com/user-attachments/assets/1f585f18-0820-4d78-928d-546aad1f83dd)

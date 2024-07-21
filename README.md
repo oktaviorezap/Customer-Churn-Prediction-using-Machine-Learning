@@ -38,8 +38,9 @@
 To determine the best model to predict customer churn from the three models above, we must consider several relevant metrics: 
 1. **Accuracy** on testing data
 2. **ROC** (Receiver Operating Characteristic) score. 
-<br>
-<br>![image](https://github.com/user-attachments/assets/6fa07724-f5c4-4589-91c9-ea483d9e7795)
+
+<br>![image](https://github.com/user-attachments/assets/6e75f28b-f62c-461f-a22e-0a282774e56e)
+
 <br>
 The following is an analysis of each metric:
 

@@ -39,7 +39,7 @@ To determine the best model to predict customer churn from the three models abov
 1. **Accuracy** on testing data
 2. **ROC** (Receiver Operating Characteristic) score. 
 <br>
-<br>![image](https://github.com/user-attachments/assets/c832532c-3087-4d55-9bca-b13fed401f7c)
+<br>![image](https://github.com/user-attachments/assets/6fa07724-f5c4-4589-91c9-ea483d9e7795)
 <br>
 The following is an analysis of each metric:
 

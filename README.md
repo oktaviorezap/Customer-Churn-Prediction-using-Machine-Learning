@@ -92,7 +92,7 @@ The following is an analysis of each metric:
 <br>
 The **Gradient Boosting Classifier** model was the best choice of these three models as it had the highest testing accuracy, highest ROC score, and showed no significant signs of overfitting. So the **Gradient Boosting Classifier** model was chosen as the best model to predict client’s repayment abilities.
 # Project Result
-Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/DQLab%20-%20Customer%20Churn%20Prediction%20Using%20Machine%20Learning.ipynb)
+Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/(Full%20Code)%20DQLab%20-%20Customer%20Churn%20Prediction%20Using%20Machine%20Learning.ipynb)
 <br>
 <br> **Number of Churn Customer Before Predicted:**
 <br>![image](https://github.com/user-attachments/assets/660f78c6-e4c7-49b0-b6ff-a1485ccc7841)

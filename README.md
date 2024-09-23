@@ -37,7 +37,7 @@
 # Determine Best Model
 To determine the best model to predict customer churn from the three models above, we must consider several relevant metrics: 
 1. **Accuracy** on testing data
-2. **ROC** (Receiver Operating Characteristic) score. 
+2. **ROC** (Receiver Operating Characteristic) score. ROC AUC score is an evaluation metric used to measure the performance of binary classification models in machine learning.
 
 <br>![image](https://github.com/user-attachments/assets/6e75f28b-f62c-461f-a22e-0a282774e56e)
 
@@ -57,7 +57,7 @@ The following is an analysis of each metric:
 3. Logistic Regression:
         <br>- Training Accuracy: 0.795700 (79.57%)
         <br>- Testing Accuracy: 0.792300 (79.23%)
-        <br>- ROC Score: 0.691500 (69.15%)
+        <br>- ROC Score: 0.691500 (69.15%)        
 <br>
 <br>
 

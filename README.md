@@ -3,10 +3,9 @@
 **Business Problem:**
 <br>DQLab Telco is a telecommunications company that already has many branches spread everywhere. Since its establishment in 2019, DQLab Telco has consistently paid attention to its customer experience so that customers will not be left behind.
 <br>
+<br> **Solution Problem:**
 <br>Although only a little over 1 year old, DQLab Telco already has many customers who have switched subscriptions to competitors. The management wants to reduce the number of customers who switch (churn) by using machine learning.
 <br>
-<br>
-<br> **Solution Problem:**
 <br>As a data scientist, I am asked to create the right model. In this assignment, I will do Machine Learning Modeling using June 2020 data.
 <br>
 <br>The steps that will be taken are:
@@ -35,60 +34,7 @@
 13. Churn Whether the customer churned or not (Yes, No)
 
 # Determine Best Model
-To determine the best model to predict customer churn from the three models above, we must consider several relevant metrics: 
-1. **Accuracy** on testing data
-2. **ROC** (Receiver Operating Characteristic) score. ROC AUC score is an evaluation metric used to measure the performance of binary classification models in machine learning.
-
-<br>![image](https://github.com/user-attachments/assets/6e75f28b-f62c-461f-a22e-0a282774e56e)
-
-<br>
-The following is an analysis of each metric:
-
-1. Random Forest:
-        <br>- Training Accuracy: 0.995700 (99.57%)
-        <br>- Testing Accuracy: 0.773100 (77.31%)
-        <br>- ROC Score: 0.677300 (67.73%)
-
-2. Gradient Boosting Classifier:
-        <br>- Training Accuracy: 0.816000 (81.60%)
-        <br>- Testing Accuracy: 0.793800 (79.38%)
-        <br>- ROC Score: 0.691900 (69.19%)
-
-3. Logistic Regression:
-        <br>- Training Accuracy: 0.795700 (79.57%)
-        <br>- Testing Accuracy: 0.792300 (79.23%)
-        <br>- ROC Score: 0.691500 (69.15%)        
-<br>
-<br>
-
-**Analysis Testing:**
-
-1. Accuracy on Testing Data:
-        <br>- Random Forest: 0.773100 (77.31%)
-        <br>- Gradient Boosting Classifier: 0.793800 (79.38%)
-        <br>- Logistic Regression: 0.792300 (79.23%)
-   <br>
-   <br>
-   From this, **Gradient Boosting Classifier** has the highest testing accuracy.
-   <br>
-   <br>
-2. ROC Score:
-        <br>- Random Forest: 0.677300 (67.73%)
-        <br>- Gradient Boosting Classifier: 0.691900 (69.19%)
-        <br>- Logistic Regression: 0.691500 (69.15%)
-   <br>
-   <br>
-   **Gradient Boosting Classifier** also has the highest ROC score.
-<br>
-<br>
-
-**Overfitting Testing:**
-<br>
-- Random Forest has a very high training accuracy (99.57%) compared to the testing accuracy (77.31%), indicating possible overfitting.
-- Gradient Boosting Classifier has a modest training accuracy (81.60%) and a fairly good testing accuracy (79.38%), indicating a more balanced model.
-- Logistic Regression has fairly close training accuracy and testing accuracy, but slightly lower accuracy than Gradient Boosting Classifier.
-<br>
-<br>
+To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `Precision` is the best Metrics to consider the Best Model
 
 **Conclusion:**
 <br>

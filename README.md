@@ -35,10 +35,12 @@
 
 # Determine Best Model
 To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `Precision` is the best Metrics to consider the Best Model
+![image](https://github.com/user-attachments/assets/9c538530-527b-4e61-b7cd-c3f30f73f7d3)
 
 **Conclusion:**
 <br>
-The **Gradient Boosting Classifier** model was the best choice of these three models as it had the highest testing accuracy, highest ROC score, and showed no significant signs of overfitting. So the **Gradient Boosting Classifier** model was chosen as the best model to predict client’s repayment abilities.
+
+
 # Project Result
 Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/(Full%20Code)%20DQLab%20-%20Customer%20Churn%20Prediction%20Using%20Machine%20Learning.ipynb)
 <br>

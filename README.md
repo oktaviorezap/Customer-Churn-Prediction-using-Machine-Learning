@@ -61,7 +61,7 @@ To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `
 If we look at the overall performance, `CatBoost` could be the best choice, mainly because of the balance in precision between the two classes and the better performance compared to other models, although it is not always the highest in each individual class.
 
 # Project Result
-Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/(Full%20Code)%20DQLab%20-%20Customer%20Churn%20Prediction%20Using%20Machine%20Learning.ipynb)
+Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/(Full_Code)_DQLab_Customer_Churn_Prediction_Using_Machine_Learning.ipynb)
 <br>
 <br> **Number of Churn Customer Before Predicted:**
 <br>![image](https://github.com/user-attachments/assets/7309daa9-bed7-4749-9c68-1758c89e2a6e)

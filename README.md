@@ -36,8 +36,7 @@
 
 # Determine Best Model (Part 1)
 To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `Precision` is the best Metrics to consider the Best Model
-![image](https://github.com/user-attachments/assets/292cbcc2-d2ac-460e-a568-9684e8d009cc)
-
+![image](https://github.com/user-attachments/assets/6573cb49-ae31-43df-b1eb-c2542b2e0e41)
 
 **Model Selection Result :**
 <br>`Logistic Regression()` chosen as the model because to prevent False Positive (Churn Customer predicted as No Churn Customer) `Logistic Regression()` has the best **Precision** among other Models in the Testing Performance
@@ -52,7 +51,14 @@ To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `
 
 # Determine Best Model (Part 2: with Additional New Models)
 To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `Precision` is the best Metrics to consider the Best Model
+![image](https://github.com/user-attachments/assets/bc48238b-c0be-45c1-a74c-2c231de3c5b2)
 
+**Model Selection Result:**
+- From the given table, the model that has the highest precision on the test set for both classes (Class 0 and Class 1) is `Gaussian Naive Bayes` on Class 0 with precision 0.869697 (86.97%) and Class 1 with precision 0.488889 (48.89%). However, the precision on Class 1 is quite low, which may indicate class imbalance.
+
+- However, looking at the trade-off between the precision for both classes, the `CatBoost` model has a relatively balanced precision between the two classes in the test set: 0.836233 (83.62%) for Class 0 and 0.653110 (65.31%) for Class 1. The model offers quite good results in classifying both classes well.
+
+If we look at the overall performance, `CatBoost` could be the best choice, mainly because of the balance in precision between the two classes and the better performance compared to other models, although it is not always the highest in each individual class.
 
 # Project Result
 Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/(Full%20Code)%20DQLab%20-%20Customer%20Churn%20Prediction%20Using%20Machine%20Learning.ipynb)
@@ -61,5 +67,10 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>![image](https://github.com/user-attachments/assets/0210caae-e058-4ba0-ab97-bec531d54909)
 <br>
 <br>
-<br> **Number of Churn Customer After Predicted:**
-<br>![image](https://github.com/user-attachments/assets/1f585f18-0820-4d78-928d-546aad1f83dd)
+<br> **Number of Churn Customer After Predicted (Logistic Regression):**
+<br>![image](https://github.com/user-attachments/assets/de998fbd-917c-4e79-a179-78aa8591b61c)
+<br>
+<br>
+<br> **Number of Churn Customer After Predicted (Catboost Classifier):**
+<br>![image](https://github.com/user-attachments/assets/a9ae0ebb-b76f-4ff3-a984-46171c2bdfcf)
+

@@ -1,5 +1,5 @@
 # DQLab - Python Project : Customer Churn Prediction using Machine Learning
-# Project Brackground
+# Project Background
 **Business Problem:**
 <br>DQLab Telco is a telecommunications company that already has many branches spread everywhere. Since its establishment in 2019, DQLab Telco has consistently paid attention to its customer experience so that customers will not be left behind.
 <br>

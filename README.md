@@ -153,14 +153,14 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>
 
 **Logistic Regression**:
-1. True Positive (TP): **FP (Logistic Regression): 1836 - 1389 = 447**
+1. True Positive (TP): **TP (Logistic Regression): 1836 - 1389 = 447**
 
-2. True Negative (TN): **FN (Logistic Regression): 5114 - 5561 = 447**
+2. True Negative (TN): **TN (Logistic Regression): 5114 - 5561 = 447**
 
 **CatBoost Classifier**:
-1. True Positive (TP): **FP (CatBoost): 1836 - 1380 = 456**
+1. True Positive (TP): **TP (CatBoost): 1836 - 1380 = 456**
 
-2. True Negative (TN): **FN (CatBoost): 5114 - 5570 = 456**
+2. True Negative (TN): **TN (CatBoost): 5114 - 5570 = 456**
 <br>
 
 ### Revenue Profit Potential

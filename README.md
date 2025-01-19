@@ -4,7 +4,7 @@
 3. **Determine Best Model (Part 1)**
 4. **Determine Best Model (Part 2: with Additional New Models)**
 5. **Prediction Result**
-6. **Business Impact Analysis & Implementation**
+6. **Business Impact Analysis Implementation (Profit & Loss Potential)**
 
 # Project Background
 **Business Problem:**

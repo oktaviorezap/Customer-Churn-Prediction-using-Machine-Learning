@@ -139,7 +139,7 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 Although the `Catboost Classifier` has a better precision for Testing for each class, the Business Impact of the `Logistic Regression` model is better because the potential lost revenue is not as large as the `Catboost Classifier`.
 
 ### Suggestion for the Future Prediction Analysis
-1. **Additional Data**: In order to be able to assess the Business Impact of each selected Best Model, additional data such as Customer Acquisition Cost (CAC), Customer Retention Cost (CRC) and other Financial Data such as Tax, Interest, Cost etc. are required to analyse to see the Business Impact from the aspect of Net Profit. 
+1. **Additional Data**: In order to be able to assess the Business Impact of each selected Best Model, additional data such as Customer Acquisition Cost (CAC), Customer Retention Cost (CRC) and other Financial Data such as Taxes, Interest, Costs etc. are needed to analyse to see the Business Impact from the aspects of Net Profits, Pricing, to Strategic decisions to improve the Telco's business performance.
 2. **Predicted Distribution vs Original Data**:
    - `Logistic Regression`: This model predicts 5561 customers as No Churn and 1389 customers as Yes Churn. From this result, there is a slight difference compared to the original data (5114 No Churn and 1836 Yes Churn).
    - `CatBoost Classifier`: This model predicts 5570 customers as No Churn and 1380 customers as Yes Churn. Here, the prediction is slightly closer to the actual number of customers who did not churn (5114), but there is still a slight difference.

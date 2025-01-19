@@ -88,9 +88,25 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>Although the percentage of churn rate has decreased after prediction (Actual Data : **26.42%**; Logistic Regression: **19.99%**; Catboost Classifier: **19.86%**), we also need to look at the Business Impact of various Business Metrics after Prediction which is seen from **False Positive (Churn predicted as No Churn)** and **False Negative (No Churn predicted as Churn)**, among others: 
 1. **Revenue Loss**: measuring the potential loss of Average Revenue from the Prediction results.
 2. **CLTV (Customer Life-Time Value) Loss**: measures the potential loss of Average Revenue that can be generated from a customer during their relationship with the company.
+<br>
 
 **Data Provided:**
 1.    Average Monthly Charges (Churn Customer): $74.61 per Month
 2.    Average Monthly Bill (No Churn Customers): $61.54 per Month
 3.    Average Length of Stay (Churn Customers): 17.99 Months
 4.    Average Tenure (Without Churn Customers): 37.61 Months
+<br>
+
+**Logistic Regression:**
+1. False Positive (FP): Customers who actually churn (Yes), but are predicted not to churn (No).
+	**FP (Logistic Regression): 1836 - 1389 = 447**
+
+2. False Negative (FN): Customers who actually did not churn (No), but were predicted to churn (Yes).
+        **FN (Logistic Regression): 5114 - 5561 = 447**
+
+**CatBoost Classifier:**
+1. False Positive (FP): Customers who actually churn (Yes), but are predicted not to churn (No).
+        **FP (CatBoost): 1836 - 1380 = 456**
+
+2. False Negative (FN): Customers who did not actually churn (No), but were predicted to churn (Yes).
+        **FN (CatBoost): 5114 - 5570 = 456**

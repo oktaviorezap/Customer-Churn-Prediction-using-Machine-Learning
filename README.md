@@ -128,3 +128,12 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 
 - **Revenue Loss Potential for Logistic Regression**: **$33,411.27** + **$27,509.58** = **$60,920.85 per Month**
 - **Revenue Loss Potential for Catboost Classifier**: **$34,101.16** + **$28,051.04** = **$62,152.20 per Month**
+
+# Prediction Result Conclusion
+- Revenue per Month : **$314,709.04 per Month**
+- **Revenue Loss Potential for Logistic Regression** = **$60,920.85 per Month**
+- **Revenue Loss Potential for Catboost Classifier** = **$62,152.20 per Month**
+- **Potential Revenue Earned for Logistic Regression** = **$314,709.04** - **$60,920.85** = **$253,788.19 per Month** 
+- **Potential Revenue Earned for Catboost Classifier** = **$314,709.04** - **$62,152.20** = **$252,556.84 per Month**
+
+Although the `Catboost Classifier` has a better precision for Testing for each class, the Business Impact of the `Logistic Regression` model is better because the potential lost revenue is not as large as the `Catboost Classifier`.

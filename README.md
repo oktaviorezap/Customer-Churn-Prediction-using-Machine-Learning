@@ -90,6 +90,7 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 2. **CLTV (Customer Life-Time Value) Loss**: measures the potential loss of Average Revenue that can be generated from a customer during their relationship with the company.
 <br>
 
+## Business Impact Analysis Implementation
 **Data Provided:**
 1.    Average Monthly Charges (Churn Customer): $74.61 per Month
 2.    Average Monthly Bill (No Churn Customers): $61.54 per Month
@@ -97,18 +98,18 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 4.    Average Tenure (Without Churn Customers): 37.61 Months
 <br>
 
-**Logistic Regression:**
+**Logistic Regression**:
 1. False Positive (FP): **FP (Logistic Regression): 1836 - 1389 = 447**
 
 2. False Negative (FN): **FN (Logistic Regression): 5114 - 5561 = 447**
 
-**CatBoost Classifier:**
+**CatBoost Classifier**:
 1. False Positive (FP): **FP (CatBoost): 1836 - 1380 = 456**
 
 2. False Negative (FN): **FN (CatBoost): 5114 - 5570 = 456**
 <br>
 
-**Revenue Loss**
+### Revenue Loss
 <br>
 
 **False Positive (FP)** means we misidentify a Churn Customer as a Non Churn customer, leading to potential lost revenue. We use Average Monthly Charges (Churn Customer) ($74.61) to calculate Revenue Loss.

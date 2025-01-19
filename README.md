@@ -91,7 +91,7 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>
 
 **Data Provided:**
-1.    Average Monthly Charges (Churn Customer): $74.61
-2.    Average Monthly Bill (No Churn Customers): $61.54
+1.    Average Monthly Charges (Churn Customer): $74.61 per Month
+2.    Average Monthly Bill (No Churn Customers): $61.54 per Month
 3.    Average Length of Stay (Churn Customers): 17.99 Months
 4.    Average Tenure (Without Churn Customers): 37.61 Months

@@ -98,15 +98,13 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>
 
 **Logistic Regression:**
-1. False Positive (FP): Customers who actually churn (Yes), but are predicted not to churn (No).
-	**FP (Logistic Regression): 1836 - 1389 = 447**
+1. False Positive (FP): **FP (Logistic Regression): 1836 - 1389 = 447**
 
-2. False Negative (FN): Customers who actually did not churn (No), but were predicted to churn (Yes).
-        **FN (Logistic Regression): 5114 - 5561 = 447**
+2. False Negative (FN): **FN (Logistic Regression): 5114 - 5561 = 447**
 
 **CatBoost Classifier:**
-1. False Positive (FP): Customers who actually churn (Yes), but are predicted not to churn (No).
-        **FP (CatBoost): 1836 - 1380 = 456**
+1. False Positive (FP): **FP (CatBoost): 1836 - 1380 = 456**
 
-2. False Negative (FN): Customers who did not actually churn (No), but were predicted to churn (Yes).
-        **FN (CatBoost): 5114 - 5570 = 456**
+2. False Negative (FN): **FN (CatBoost): 5114 - 5570 = 456**
+<br>
+

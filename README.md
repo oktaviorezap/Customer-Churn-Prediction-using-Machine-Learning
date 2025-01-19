@@ -139,18 +139,19 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 Although the `Catboost Classifier` has a better precision for Testing for each class, the Business Impact of the `Logistic Regression` model is better because the potential lost revenue is not as large as the `Catboost Classifier`.
 
 ### Suggestion for the Future Prediction Analysis
-1. **Predicted Distribution vs Original Data**:
+1. **Additional Data**: In order to be able to assess the Business Impact of each selected Best Model, additional data such as Customer Acquisition Cost (CAC), Customer Retention Cost (CRC) and other Financial Data such as Tax, Interest, Cost etc. are required to analyse to see the Business Impact from the aspect of Net Profit. 
+2. **Predicted Distribution vs Original Data**:
    - `Logistic Regression`: This model predicts 5561 customers as No Churn and 1389 customers as Yes Churn. From this result, there is a slight difference compared to the original data (5114 No Churn and 1836 Yes Churn).
    - `CatBoost Classifier`: This model predicts 5570 customers as No Churn and 1380 customers as Yes Churn. Here, the prediction is slightly closer to the actual number of customers who did not churn (5114), but there is still a slight difference.
 
-2. Expected Number of Customers to Churn (Yes):
+3. **Expected Number of Customers to Churn (Yes)**:
    - The original data shows 1836 churn (Yes) customers. Both models predict a lower number of churns, 1389 for `Logistic Regression` and 1380 for `CatBoost Classifier`. This could indicate that both models are more likely to predict customers as No Churn compared to Yes Churn.
 
-3. Imbalance:
+4. **Imbalance**:
    - In the original data, churn is the minority (only 1836 out of 6950), while no churn is the majority (5114 out of 6950). This reflects class imbalance, which is a challenge in classification, as models tend to predict the majority class (No Churn) more often to minimise overall error.
    - In this case, although both models (`Logistic Regression` and `CatBoost Classifier`) tended to predict No Churn more, `CatBoost Classifier` was slightly more balanced in the number of churn predictions (1380) than `Logistic Regression (1389)`.
 
-4. Conclusion:
+5. **Conclusion**:
    - Both models are not completely accurate in predicting churn (Yes) because there is a class imbalance in the original data. They tend to predict No Churn more often.
    - `CatBoost Classifier` is slightly closer to the original number of churn customers than `Logistic Regression`, but both models still over-predict No Churn.
    - To improve performance, you can consider techniques such as `SMOTE (Synthetic Minority Over-sampling Technique)` or using a penalty for churn misprediction in the model to address this class imbalance issue.

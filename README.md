@@ -88,7 +88,6 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>Although the percentage of churn rate has decreased after prediction (Actual Data : **26.42%**; Logistic Regression: **19.99%**; Catboost Classifier: **19.86%**), we also need to look at the Business Impact of various Business Metrics after Prediction which is seen from **False Positive (Churn predicted as No Churn)** and **False Negative (No Churn predicted as Churn)**, among others: 
 1. **Revenue Loss**: measuring the potential loss of Average Revenue from the Prediction results.
 2. **CLTV (Customer Life-Time Value) Loss**: measures the potential loss of Average Revenue that can be generated from a customer during their relationship with the company.
-<br>
 
 **Data Provided:**
 1.    Average Monthly Charges (Churn Customer): $74.61 per Month

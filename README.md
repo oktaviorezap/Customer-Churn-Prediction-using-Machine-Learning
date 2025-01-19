@@ -127,6 +127,7 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 
 - **Revenue Loss for Logistic Regression**: 
 - **Revenue Loss for Catboost Classifier**:
+<br>
 
 ### Customer Lifetime Value (CLTV) Loss
 **CLTV Loss (FP)**: means that we lose customers who actually Churn, so we lose their potential Lifetime Value (CLTV). We use Average Tenure (Churn Customer) (17.99 months) and Average Monthly Charges (Churn Customer) ($74.61) to calculate CLTV Loss.

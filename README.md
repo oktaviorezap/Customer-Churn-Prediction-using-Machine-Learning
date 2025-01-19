@@ -77,11 +77,8 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br> **Number of Churn Customer After Predicted (Logistic Regression):**
 <br>![image](https://github.com/user-attachments/assets/83a3222c-1f1a-4d8e-a1e5-b9bb249d0d71)
 <br>
-
-# Business Impact Analysis
-
 <br>
 <br> **Number of Churn Customer After Predicted (Catboost Classifier):**
 <br>![image](https://github.com/user-attachments/assets/d35a27b9-3adb-4fe4-909f-9e9aa0f12042)
 
-
+# Business Impact Analysis

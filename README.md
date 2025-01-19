@@ -4,7 +4,8 @@
 3. **Determine Best Model (Part 1)**
 4. **Determine Best Model (Part 2: with Additional New Models)**
 5. **Prediction Result**
-6. **Business Impact Analysis Implementation (Profit & Loss Potential)**
+6. **Business Impact Analysis Implementation**
+7. **Prediction Result Conclusion**
 
 # Project Background
 **Business Problem:**
@@ -85,9 +86,9 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 
 # Business Impact Analysis
 **Business Objective** : Reducing the Number of Churn
-<br>Although the percentage of churn rate has decreased after prediction (Actual Data : **26.42%**; Logistic Regression: **19.99%**; Catboost Classifier: **19.86%**), we also need to look at the Business Impact of various Business Metrics after Prediction which is seen from **False Positive (Churn predicted as No Churn)** and **False Negative (No Churn predicted as Churn)**, among others: 
-1. **Revenue Profit / Loss**: measuring the potential profit/loss of Average Revenue from the Prediction results.
-2. **CLTV (Customer Life-Time Value) Profit / Loss**: measures the potential profit/loss of Average Revenue that can be generated from a customer during their relationship with the company.
+<br>Although the percentage of churn rate has decreased after prediction (Actual Data : **26.42%**; Logistic Regression: **19.99%**; Catboost Classifier: **19.86%**), we also need to look at the Business Impact of various Business Metrics after Prediction which is seen from **False Positive (Churn predicted as No Churn)** and **False Negative (No Churn predicted as Churn)*** among others: 
+1. **Revenue Loss**: measuring the potential loss of Average Revenue from the Prediction results.
+2. **CLTV (Customer Life-Time Value) Loss**: measures the potential loss of Average Revenue that can be generated from a customer during their relationship with the company from the Prediction Result.
 <br>
 
 **Data Provided:**
@@ -95,8 +96,9 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 2.    Average Monthly Bill (No Churn Customers): $61.54 per Month
 3.    Average Length of Stay (Churn Customers): 17.99 Months
 4.    Average Tenure (Without Churn Customers): 37.61 Months
+5.    Total Revenue per Month : $314,709.04 per Month
 
-## Business Impact Analysis Implementation (Loss Potential)
+## Business Impact Analysis Implementation
 <br>
 
 **Logistic Regression**:
@@ -128,74 +130,3 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 
 - **Revenue Loss Potential for Logistic Regression**: **$33,411.27** + **$27,509.58** = **$60,920.85 per Month**
 - **Revenue Loss Potential for Catboost Classifier**: **$34,101.16** + **$28,051.04** = **$62,152.20 per Month**
-<br>
-
-### Customer Lifetime Value (CLTV) Loss Potential
-**CLTV Loss (FP)**: means that we lose customers who actually Churn, so we lose their potential Lifetime Value (CLTV). We use Average Tenure (Churn Customer) (17.99 months) and Average Monthly Charges (Churn Customer) ($74.61) to calculate CLTV Loss.
-- **Logistic Regression (FP)**: CLTV Loss FP Logistic = 447 × 17.99 × 74.61 = **$594,906.61 per Month**
-- **CatBoost Classifier (FP)**: CLTV Loss FP CatBoost = 456 × 17.99 × 74.61 = **$601,553.95 per Month**
-<br>
-
-**CLTV Loss (FN)** means that we lose customers who don't actually Churn, so we lose their potential Lifetime Value (CLTV). We use Average Tenure (No Churn Customer) (37.61 months) and Average Monthly Charges (No Churn Customer) ($61.54) to calculate CLTV Loss.
-- **Logistic Regression (FN)**: CLTV Loss FN Logistic = 447 × 37.61 × 61.54 = **$1,034,198.80 per Month**
-- **CatBoost Classifier (FN)**: CLTV Loss FN CatBoost = 456 × 37.61 × 61.54 = **$1,050,411.68 per Month**
-<br>
-
-**Conclusion**:
-<br>
-
-- **CLTV Loss Potential for Logistic Regression**: **$594,906.61** + **$1,034,198.80** = **$1,629,105.41 per Month**
-- **CLTV Loss Potential for Catboost Classifier**: **$601,553.95** + **$1,050,411.68** = **$1,651,965.63 per Month**
-
-
-
-## Business Impact Analysis Implementation (Profit Potential)
-<br>
-
-**Logistic Regression**:
-1. True Positive (TP): **TP (Logistic Regression): 1836 - 1389 = 447**
-
-2. True Negative (TN): **TN (Logistic Regression): 5114 - 5561 = 447**
-
-**CatBoost Classifier**:
-1. True Positive (TP): **TP (CatBoost): 1836 - 1380 = 456**
-
-2. True Negative (TN): **TN (CatBoost): 5114 - 5570 = 456**
-<br>
-
-### Revenue Profit Potential
-<br>
-
-**True Positive (TP)** means we misidentify a Churn Customer as a Non Churn customer, leading to potential lost revenue. We use Average Monthly Charges (Churn Customer) ($74.61) to calculate Revenue Profit.
-- **Logistic Regression (TP)**: Revenue Profit FP Logistic = 447 × 74.61 = **$33,411.27 per Month**
-- **CatBoost Classifier (TP)**: Revenue Profit FP CatBoost = 456 × 74.61 = **$34,010.16 per Month**
-<br>
-
-**True Negative (TN)** means that we are misidentifying customers who are No Churn Customer as Churn Customer, leading to potential lost revenue. We use Average Monthly Charges (No Churn Customer) ($61.54) to calculate Revenue Profit.
-- **Logistic Regression (TN)**: Revenue Profit FN Logistic = 447 × 61.54 = **$27,509.58 per Month**
-- **CatBoost Classifier (TN)**: Revenue Profit FN CatBoost = 456 × 61.54 = **$28,051.04 per Month**
-<br>
-
-**Conclusion**:
-<br>
-
-- **Revenue Profit Potential for Logistic Regression**: **$33,411.27** + **$27,509.58** = **$60,920.85 per Month**
-- **Revenue Profit Potential for Catboost Classifier**: **$34,101.16** + **$28,051.04** = **$62,152.20 per Month**
-<br>
-
-### Customer Lifetime Value (CLTV) Profit Potential
-**CLTV Profit (TP)**: means that we lose customers who actually Churn, so we lose their potential Lifetime Value (CLTV). We use Average Tenure (Churn Customer) (17.99 months) and Average Monthly Charges (Churn Customer) ($74.61) to calculate CLTV Profit.
-- **Logistic Regression (TP)**: CLTV Profit FP Logistic = 447 × 17.99 × 74.61 = **$594,906.61 per Month**
-- **CatBoost Classifier (TP)**: CLTV Profit FP CatBoost = 456 × 17.99 × 74.61 = **$601,553.95 per Month**
-<br>
-
-**CLTV Profit (TN)** means that we lose customers who don't actually Churn, so we lose their potential Lifetime Value (CLTV). We use Average Tenure (No Churn Customer) (37.61 months) and Average Monthly Charges (No Churn Customer) ($61.54) to calculate CLTV Profit.
-- **Logistic Regression (TN)**: CLTV Profit FN Logistic = 447 × 37.61 × 61.54 = **$1,034,198.80 per Month**
-- **CatBoost Classifier (TN)**: CLTV Profit FN CatBoost = 456 × 37.61 × 61.54 = **$1,050,411.68 per Month**
-<br>
-
-**Conclusion**:
-<br>
-
-- **CLTV Profit Potential for Logistic Regression**: **$594,906.61** + **$1,034,198.80** = **$1,629,105.41 per Month**
-- **CLTV Profit Potential for Catboost Classifier**: **$601,553.95** + **$1,050,411.68** = **$1,651,965.63 per Month**

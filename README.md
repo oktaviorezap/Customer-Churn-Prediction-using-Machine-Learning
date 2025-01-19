@@ -89,7 +89,7 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>
 
 **Data Provided:**
-1.    Average Monthly Cost (Switching Customers): $74.61
+1.    Average Monthly Charges (Churn Customer): $74.61
 2.    Average Monthly Bill (No Churn Customers): $61.54
 3.    Average Length of Stay (Churn Customers): 17.99 Months
 4.    Average Tenure (Without Churn Customers): 37.61 Months

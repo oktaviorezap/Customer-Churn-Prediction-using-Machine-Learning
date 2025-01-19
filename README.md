@@ -64,7 +64,7 @@ If we look at the overall performance, `CatBoost` could be the best choice, main
 Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/(Full_Code)_DQLab_Customer_Churn_Prediction_Using_Machine_Learning.ipynb)
 <br>
 <br> **Number of Churn Customer Before Predicted:**
-<br>![image](https://github.com/user-attachments/assets/7309daa9-bed7-4749-9c68-1758c89e2a6e)
+<br>![image](https://github.com/user-attachments/assets/e535b023-ba95-41f7-ab98-3d577228c8be)
 <br>
 <br>
 <br> **Number of Churn Customer After Predicted (Logistic Regression):**

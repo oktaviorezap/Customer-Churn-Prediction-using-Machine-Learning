@@ -82,3 +82,5 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>![image](https://github.com/user-attachments/assets/d35a27b9-3adb-4fe4-909f-9e9aa0f12042)
 
 # Business Impact Analysis
+**Business Objective** : Reducing the Number of Churn
+<br>

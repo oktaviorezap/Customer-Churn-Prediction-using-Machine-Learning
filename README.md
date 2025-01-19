@@ -108,15 +108,11 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 2. False Negative (FN): **FN (CatBoost): 5114 - 5570 = 456**
 <br>
 
+**Revenue Loss**
 **Revenue Loss (FP)**:
-False Positive (FP) means we misidentify a Churn customer as a Non-Churn customer, leading to potential lost revenue. We use Average Monthly Charges (Churn Customer) ($74.61) to calculate Revenue Loss.
-
-	- **Logistic Regression (FP)**:
-		- Revenue Loss FP Logistic = 447 × 74.61 = $33,411.27 per Month
-		
-
-	- **CatBoost Classifier (FP)**:
-		- Revenue Loss FP CatBoost = 456 × 74.61 = $34,010.16 per Month
+<br>False Positive (FP) means we misidentify a Churn customer as a Non-Churn customer, leading to potential lost revenue. We use Average Monthly Charges (Churn Customer) ($74.61) to calculate Revenue Loss.
+1. **Logistic Regression (FP)**: Revenue Loss FP Logistic = 447 × 74.61 = **$33,411.27 per Month**
+2. **CatBoost Classifier (FP)**: Revenue Loss FP CatBoost = 456 × 74.61 = **$34,010.16 per Month**
 
 **CLTV Loss (FP)**:
 CLTV Loss (FP) means that we lose customers who actually Churn, so we lose their potential Lifetime Value (CLTV). We use Average Tenure (Churn Customer) (17.99 months) and Average Monthly Charges (Churn Customer) ($74.61) to calculate CLTV Loss.
@@ -128,24 +124,3 @@ CatBoost Classifier (FP):
 CLTV Loss FP CatBoost = 456 × 17.99 × 74.61 = 601,553.95
 
 
-
-Revenue Loss (FN):
-
-False Negative (FN) means that we are misidentifying customers who are not churning as churning customers, leading to revenue loss. We use Average Monthly Charges (No Churn Customer) ($61.54) to calculate Revenue Loss.
-
-Logistic Regression (FN):
-Revenue Loss FN Logistic = 447 × 61.54 = 27,509.58
-Revenue Loss FN Logistic = 447 × 61.54 = 27,509.58
-CatBoost Classifier (FN):
-Revenue Loss FN CatBoost = 456 × 61.54 = 28,051.04
-Revenue Loss FN CatBoost = 456 × 61.54 = 28,051.04
-CLTV Loss (FN):
-
-CLTV Loss (FN) means that we lose customers who don't actually churn, so we lose their potential Lifetime Value (CLTV). We use Average Tenure (No Churn Customer) (37.61 months) and Average Monthly Charges (No Churn Customer) ($61.54) to calculate CLTV Loss.
-
-Logistic Regression (FN):
-CLTV Loss FN Logistic = 447 × 37.61 × 61.54 = 1,034,198.80
-CLTV Loss FN Logistic = 447 × 37.61 × 61.54 = 1,034,198.80
-CatBoost Classifier (FN):
-CLTV Loss FN CatBoost = 456 × 37.61 × 61.54 = 1,050,411.68
-CLTV Loss FN CatBoost = 456 × 37.61 × 61.54 = 1,050,411.68

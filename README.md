@@ -124,16 +124,24 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 
 **Conclusion**:
 <br>
+
 - **Revenue Loss for Logistic Regression**: 
 - **Revenue Loss for Catboost Classifier**:
 
-**CLTV Loss (FP)**:
-CLTV Loss (FP) means that we lose customers who actually Churn, so we lose their potential Lifetime Value (CLTV). We use Average Tenure (Churn Customer) (17.99 months) and Average Monthly Charges (Churn Customer) ($74.61) to calculate CLTV Loss.
+### Customer Lifetime Value (CLTV) Loss
+**CLTV Loss (FP)**: means that we lose customers who actually Churn, so we lose their potential Lifetime Value (CLTV). We use Average Tenure (Churn Customer) (17.99 months) and Average Monthly Charges (Churn Customer) ($74.61) to calculate CLTV Loss.
+- **Logistic Regression (FP)**: CLTV Loss FP Logistic = 447 × 17.99 × 74.61 = **$594,906.61 per Month**
+- **CatBoost Classifier (FP)**: CLTV Loss FP CatBoost = 456 × 17.99 × 74.61 = **$601,553.95 per Month**
+<br>
 
-Logistic Regression (FP):
-CLTV Loss FP Logistic = 447 × 17.99 × 74.61 = 594,906.61
+**CLTV Loss (FN)** means that we lose customers who don't actually Churn, so we lose their potential Lifetime Value (CLTV). We use Average Tenure (No Churn Customer) (37.61 months) and Average Monthly Charges (No Churn Customer) ($61.54) to calculate CLTV Loss.
+- **Logistic Regression (FN)**: CLTV Loss FN Logistic = 447 × 37.61 × 61.54 = 1,034,198.80
+- **CatBoost Classifier (FN)**: CLTV Loss FN CatBoost = 456 × 37.61 × 61.54 = 1,050,411.68
+<br>
 
-CatBoost Classifier (FP):
-CLTV Loss FP CatBoost = 456 × 17.99 × 74.61 = 601,553.95
+**Conclusion**:
+<br>
 
+- **CLTV Loss for Logistic Regression**: 
+- **CLTV Loss for Catboost Classifier**:
 

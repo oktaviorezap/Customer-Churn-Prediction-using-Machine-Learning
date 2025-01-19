@@ -149,7 +149,7 @@ Although the `Catboost Classifier` has a better precision for Testing for each c
 
 4. **Imbalance**:
    - In the original data, churn is the minority (only 1836 out of 6950), while no churn is the majority (5114 out of 6950). This reflects class imbalance, which is a challenge in classification, as models tend to predict the majority class (No Churn) more often to minimise overall error.
-   - In this case, although both models (`Logistic Regression` and `CatBoost Classifier`) tended to predict No Churn more, `CatBoost Classifier` was slightly more balanced in the number of churn predictions (1380) than `Logistic Regression (1389)`.
+   - In this case, although both models (`Logistic Regression` and `CatBoost Classifier`) tended to predict No Churn more, `CatBoost Classifier` was slightly more balanced in the number of churn predictions (1380) than `Logistic Regression` (1389).
 
 5. **Conclusion**:
    - Both models are not completely accurate in predicting churn (Yes) because there is a class imbalance in the original data. They tend to predict No Churn more often.

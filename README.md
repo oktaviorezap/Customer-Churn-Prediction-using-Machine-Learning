@@ -121,7 +121,6 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 - **Logistic Regression (FN)**: Revenue Loss FN Logistic = 447 × 61.54 = **$27,509.58 per Month**
 - **CatBoost Classifier (FN)**: Revenue Loss FN CatBoost = 456 × 61.54 = **$28,051.04 per Month**
 <br>
-<br>
 
 **Conclusion**:
 <br>

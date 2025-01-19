@@ -36,7 +36,7 @@
 
 # Determine Best Model (Part 1)
 To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `Precision` is the best Metrics to consider the Best Model
-![image](https://github.com/user-attachments/assets/6573cb49-ae31-43df-b1eb-c2542b2e0e41)
+![image](https://github.com/user-attachments/assets/161ce439-86fd-4a75-813f-3668e1a1e672)
 
 **Model Selection Result :**
 <br>`Logistic Regression()` chosen as the model because to prevent False Positive (Churn Customer predicted as No Churn Customer) `Logistic Regression()` has the best **Precision** among other Models in the Testing Performance
@@ -51,7 +51,7 @@ To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `
 
 # Determine Best Model (Part 2: with Additional New Models)
 To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `Precision` is the best Metrics to consider the Best Model
-![image](https://github.com/user-attachments/assets/bc48238b-c0be-45c1-a74c-2c231de3c5b2)
+![image](https://github.com/user-attachments/assets/4631c47d-f3a1-4989-8f9f-5b728c9c1373)
 
 **Model Selection Result:**
 - From the given table, the model that has the highest precision on the test set for both classes (Class 0 and Class 1) is `Gaussian Naive Bayes` on Class 0 with precision 0.869697 (86.97%) and Class 1 with precision 0.488889 (48.89%). However, the precision on Class 1 is quite low, which may indicate class imbalance.
@@ -68,9 +68,10 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>
 <br>
 <br> **Number of Churn Customer After Predicted (Logistic Regression):**
-<br>![image](https://github.com/user-attachments/assets/de998fbd-917c-4e79-a179-78aa8591b61c)
+<br>![image](https://github.com/user-attachments/assets/83a3222c-1f1a-4d8e-a1e5-b9bb249d0d71)
 <br>
 <br>
 <br> **Number of Churn Customer After Predicted (Catboost Classifier):**
-<br>![image](https://github.com/user-attachments/assets/a9ae0ebb-b76f-4ff3-a984-46171c2bdfcf)
+<br>![image](https://github.com/user-attachments/assets/d35a27b9-3adb-4fe4-909f-9e9aa0f12042)
+
 

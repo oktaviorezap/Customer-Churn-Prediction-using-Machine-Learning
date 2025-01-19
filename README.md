@@ -87,7 +87,6 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 1. **Revenue Loss**: measuring the potential loss of Average Revenue from the Prediction results.
 2. **CLTV (Customer Life-Time Value) Loss**: measures the potential loss of Average Revenue that can be generated from a customer during their relationship with the company.
 <br>
-<br>
 
 **Data Provided:**
 1.    Average Monthly Cost (Switching Customers): $74.61

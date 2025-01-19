@@ -1,4 +1,11 @@
 # DQLab - Python Project : Customer Churn Prediction using Machine Learning
+1. **Project Background**
+2. **Dataset Description**
+3. **Determine Best Model (Part 1)**
+4. **Determine Best Model (Part 2: with Additional New Models)**
+5. **Prediction Result**
+6. **Business Impact Analysis**
+
 # Project Background
 **Business Problem:**
 <br>DQLab Telco is a telecommunications company that already has many branches spread everywhere. Since its establishment in 2019, DQLab Telco has consistently paid attention to its customer experience so that customers will not be left behind.
@@ -15,7 +22,7 @@
 4.    Determining the Best Model
 5.    Predict the Customer Churn
 
-# Dataset
+# Dataset Description
 **Dataset Link:** https://storage.googleapis.com/dqlab-dataset/dqlab_telco_final.csv
 <br>
 <br>Dataset details as follows:
@@ -60,7 +67,7 @@ To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `
 
 If we look at the overall performance, `CatBoost` could be the best choice, mainly because of the balance in precision between the two classes and the better performance compared to other models, although it is not always the highest in each individual class.
 
-# Project Result
+# Prediction Result
 Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/(Full_Code)_DQLab_Customer_Churn_Prediction_Using_Machine_Learning.ipynb)
 <br>
 <br> **Number of Churn Customer Before Predicted:**
@@ -70,6 +77,9 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br> **Number of Churn Customer After Predicted (Logistic Regression):**
 <br>![image](https://github.com/user-attachments/assets/83a3222c-1f1a-4d8e-a1e5-b9bb249d0d71)
 <br>
+
+# Business Impact Analysis
+
 <br>
 <br> **Number of Churn Customer After Predicted (Catboost Classifier):**
 <br>![image](https://github.com/user-attachments/assets/d35a27b9-3adb-4fe4-909f-9e9aa0f12042)

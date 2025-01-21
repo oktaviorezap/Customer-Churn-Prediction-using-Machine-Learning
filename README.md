@@ -141,11 +141,11 @@ Although the `Catboost Classifier` has a better precision for Testing for each c
 ### Suggestion for the Future Prediction Analysis
 1. **Additional Data**: to Utilize more Business Metrics and Aspects to assess the Business Impact of each selected Best Model, additional data such as Customer Acquisition Cost (CAC), Customer Retention Cost (CRC) and other Financial Data such as Taxes, Interest, Costs (CAC and CRC are two aspects of these Costs) etc. are needed to analyse to see the Business Impact from the aspects of Net Profits, Pricing, to Strategic decisions to improve the Telco's business performance.
 2. **Predicted Distribution vs Original Data**:
-   - `Logistic Regression`: This model predicts 5561 customers as No Churn and 1389 customers as Yes Churn. From this result, there is a slight difference compared to the original data (5114 No Churn and 1836 Yes Churn).
-   - `CatBoost Classifier`: This model predicts 5570 customers as No Churn and 1380 customers as Yes Churn. Here, the prediction is slightly closer to the actual number of customers who did not churn (5114), but there is still a slight difference.
+   - `Logistic Regression`: This model predicts 5561 customers as No Churn and 1389 customers as Churn. From this result, there is a slight difference compared to the original data (5114 No Churn and 1836 Churn).
+   - `CatBoost Classifier`: This model predicts 5570 customers as No Churn and 1380 customers as Churn. Here, the prediction is slightly closer to the actual number of customers who did not churn (5114), but there is still a slight difference.
 
 3. **Expected Number of Customers to Churn (Yes)**:
-   - The original data shows 1836 churn (Yes) customers. Both models predict a lower number of churns, 1389 for `Logistic Regression` and 1380 for `CatBoost Classifier`. This could indicate that both models are more likely to predict customers as No Churn compared to Yes Churn.
+   - The original data shows 1836 churn (Yes) customers. Both models predict a lower number of churns, 1389 for `Logistic Regression` and 1380 for `CatBoost Classifier`. This could indicate that both models are more likely to predict customers as No Churn compared to Churn.
 
 4. **Imbalance**:
    - In the original data, churn is the minority (only 1836 out of 6950), while no churn is the majority (5114 out of 6950). This reflects class imbalance, which is a challenge in classification, as models tend to predict the majority class (No Churn) more often to minimise overall error.

@@ -44,7 +44,7 @@
 
 # Determine Best Model (Part 1)
 To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `Precision` is the best Metrics to consider the Best Model
-![image](https://github.com/user-attachments/assets/43366c91-8d68-443e-aa78-27b8ddb3bce0)
+![image](https://github.com/user-attachments/assets/14c0705f-cc7a-4bce-98bd-714eb9e144cd)
 
 **Model Selection Result :**
 <br>`Logistic Regression()` chosen as the model because to prevent False Positive (Churn Customer predicted as No Churn Customer) `Logistic Regression()` has the best **Precision** among other Models in the Testing Performance
@@ -59,7 +59,7 @@ To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `
 
 # Determine Best Model (Part 2: with Additional New Models)
 To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `Precision` is the best Metrics to consider the Best Model
-![image](https://github.com/user-attachments/assets/d2c30dc7-85a8-4c13-999d-eb12091969e4)
+![image](https://github.com/user-attachments/assets/17308649-8a7b-4e97-ad74-c8694749a104)
 
 **Model Selection Result:**
 - From the given table, the model that has the highest precision on the test set for both classes (Class 0 and Class 1) is `Gaussian Naive Bayes` on Class 0 with precision 0.869697 (86.97%) and Class 1 with precision 0.488889 (48.89%). However, the precision on Class 1 is quite low, which may indicate class imbalance.

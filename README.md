@@ -44,29 +44,28 @@
 
 # Determine Best Model (Part 1)
 To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `Precision` is the best Metrics to consider the Best Model
-![image](https://github.com/user-attachments/assets/14c0705f-cc7a-4bce-98bd-714eb9e144cd)
+![image](https://github.com/user-attachments/assets/7314e0a9-558d-4197-9e87-6787ea93d0b5)
+
 
 **Model Selection Result :**
 <br>`Logistic Regression()` chosen as the model because to prevent False Positive (Churn Customer predicted as No Churn Customer) `Logistic Regression()` has the best **Precision** among other Models in the Testing Performance
 <br>
 <br>
-- To choose the best model for customer churn classification based on the data you provide, we can consider several factors, such as:
--	Precision: Precision measures how precise the model is in predicting the positive class (in this case, Class 1 - customer churn). The higher the precision, the fewer false positives the model predicts.
--	From the table you provided, here are some insights for each model:
-  -	`Gradient Boosting`: Has fairly good precision for both classes in training and testing data, with higher precision for Class 0 in training and Class 0 in testing.
-	- `Random Forest`: Has very high precision for both classes in the training data (especially for Class 0 and Class 1), but the precision for Class 0 and Class 1 decreases in the testing data. This indicates that the model is overfitting on the training data.
-  -	`Logistic Regression`: Has fairly stable precision for both classes in training and testing data, with more balanced performance for Class 0 and Class 1 than other models.
+
+- **Best model**: `Gradient Boosting`. Although there is a slight decrease in Class 1 precision in the test set, this model shows a more balanced performance between train and test compared to the overfitting Random Forest.
+
+- **Avoid**: `Random Forest`, as it shows severe overfitting.
+To avoid False Positive, it is necessary to ensure that the precision on Class 1 remains high, even though in some cases (like Random Forest) the test precision for Class 1 is much lower.
+
+- So, `Gradient Boosting` is a more balanced and less overfit option.
 
 # Determine Best Model (Part 2: with Additional New Models)
 To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `Precision` is the best Metrics to consider the Best Model
-![image](https://github.com/user-attachments/assets/17308649-8a7b-4e97-ad74-c8694749a104)
+![image](https://github.com/user-attachments/assets/2a753d9c-4e7e-4dba-a150-87c72952f2c6)
+
 
 **Model Selection Result:**
-- From the given table, the model that has the highest precision on the test set for both classes (Class 0 and Class 1) is `Gaussian Naive Bayes` on Class 0 with precision 0.869697 (86.97%) and Class 1 with precision 0.488889 (48.89%). However, the precision on Class 1 is quite low, which may indicate class imbalance.
-
-- However, looking at the trade-off between the precision for both classes, the `CatBoost` model has a relatively balanced precision between the two classes in the test set: 0.836233 (83.62%) for Class 0 and 0.653110 (65.31%) for Class 1. The model offers quite good results in classifying both classes well.
-
-If we look at the overall performance, `CatBoost` could be the best choice, mainly because of the balance in precision between the two classes and the better performance compared to other models, although it is not always the highest in each individual class.
+From the above analysis, `LightGBM` is a good choice as it has a higher precision for Class 1 (churn), a good balance between train and test, and does not show obvious signs of overfitting. The precision on the test is also quite good compared to other models.
 
 # Prediction Result
 Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/(Full_Code)_DQLab_Customer_Churn_Prediction_Using_Machine_Learning.ipynb)
@@ -75,12 +74,12 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>![image](https://github.com/user-attachments/assets/e535b023-ba95-41f7-ab98-3d577228c8be)
 <br>
 <br>
-<br> **Number of Churn Customer After Predicted (Logistic Regression):**
-<br>![image](https://github.com/user-attachments/assets/83a3222c-1f1a-4d8e-a1e5-b9bb249d0d71)
+<br> **Number of Churn Customer After Predicted (Gradient Boosting):**
+<br>![image](https://github.com/user-attachments/assets/ad609d84-1443-4bfd-ac1a-b59876acc76e)
 <br>
 <br>
-<br> **Number of Churn Customer After Predicted (Catboost Classifier):**
-<br>![image](https://github.com/user-attachments/assets/d35a27b9-3adb-4fe4-909f-9e9aa0f12042)
+<br> **Number of Churn Customer After Predicted (LightGBM):**
+<br>![image](https://github.com/user-attachments/assets/3e83256a-2fe1-45f8-a185-c4da2414b8a7)
 
 # Business Impact Analysis
 **Business Objective** : Reducing the Number of Churn

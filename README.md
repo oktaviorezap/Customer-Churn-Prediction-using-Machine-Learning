@@ -83,7 +83,7 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 
 # Business Impact Analysis
 **Business Objective** : Reducing the Number of Churn
-<br>Although the percentage of churn rate has decreased after prediction (Actual Data : **26.42%**; Logistic Regression: **19.99%**; Catboost Classifier: **19.86%**), we also need to look at the Business Impact of various Business Metrics after Prediction which is seen from **False Positive (Churn predicted as No Churn)** and **False Negative (No Churn predicted as Churn)*** among others: 
+<br>Although the percentage of churn rate has decreased after prediction (Actual Data : **26.42%**; Logistic Regression: **19.78%**; Catboost Classifier: **19.86%**), we also need to look at the Business Impact of various Business Metrics after Prediction which is seen from **False Positive (Churn predicted as No Churn)** and **False Negative (No Churn predicted as Churn)*** among others: 
 1. **Revenue Loss**: measuring the potential loss of Average Revenue from the Prediction results.
 2. **CLTV (Customer Life-Time Value) Loss**: measures the potential loss of Average Revenue that can be generated from a customer during their relationship with the company from the Prediction Result.
 <br>
@@ -98,44 +98,44 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 ## Business Impact Analysis Implementation
 <br>
 
-**Logistic Regression**:
-1. False Positive (FP): **FP (Logistic Regression): 1836 - 1389 = 447**
+**Gradient Boosting**:
+1. False Positive (FP): **FP (Gradient Boosting): 1836 - 1375 = 461**
 
-2. False Negative (FN): **FN (Logistic Regression): 5114 - 5561 = 447**
+2. False Negative (FN): **FN (Gradient Boosting): 5114 - 5575 = 461**
 
-**CatBoost Classifier**:
-1. False Positive (FP): **FP (CatBoost): 1836 - 1380 = 456**
+**Light GBM**:
+1. False Positive (FP): **FP (LightGBM): 1836 - 1478 = 358**
 
-2. False Negative (FN): **FN (CatBoost): 5114 - 5570 = 456**
+2. False Negative (FN): **FN (LightGBM): 5114 - 5472 = 358**
 <br>
 
 ### Revenue Loss Potential
 <br>
 
 **False Positive (FP)** means we misidentify a Churn Customer as a Non Churn customer, leading to potential lost revenue. We use Average Monthly Charges (Churn Customer) ($74.61) to calculate Revenue Loss.
-- **Logistic Regression (FP)**: Revenue Loss FP Logistic = 447 × 74.61 = **$33,411.27 per Month**
-- **CatBoost Classifier (FP)**: Revenue Loss FP CatBoost = 456 × 74.61 = **$34,010.16 per Month**
+- **Gradient Boosting (FP)**: Revenue Loss FP Logistic = 461 × 74.61 = **$34,395.21 per Month**
+- **LightGBM (FP)**: Revenue Loss FP LightGBM = 358 × 74.61 = **$26,710.38 per Month**
 <br>
 
 **False Negative (FN)** means that we are misidentifying customers who are No Churn Customer as Churn Customer, leading to potential lost revenue. We use Average Monthly Charges (No Churn Customer) ($61.54) to calculate Revenue Loss.
-- **Logistic Regression (FN)**: Revenue Loss FN Logistic = 447 × 61.54 = **$27,509.58 per Month**
-- **CatBoost Classifier (FN)**: Revenue Loss FN CatBoost = 456 × 61.54 = **$28,051.04 per Month**
+- **Gradient Boosting (FN)**: Revenue Loss FN Logistic = 461 × 61.54 = **$28,369.94 per Month**
+- **LightGBM (FN)**: Revenue Loss FN LightGBM = 358 × 61.54 = **$22,031.32 per Month**
 <br>
 
 **Conclusion**:
 <br>
 
-- **Revenue Loss Potential for Logistic Regression**: **$33,411.27** + **$27,509.58** = **$60,920.85 per Month**
-- **Revenue Loss Potential for Catboost Classifier**: **$34,101.16** + **$28,051.04** = **$62,152.20 per Month**
+- **Revenue Loss Potential for Gradient Boosting**: **$34,395.21** + **$28,369.94** = **$62,765.15 per Month**
+- **Revenue Loss Potential for LightGBM**: **$26,710.38** + **$22,031.32** = **$48,741.70 per Month**
 
 # Prediction Result Conclusion
 - **Revenue per Month** : **$314,709.04 per Month**
-- **Revenue Loss Potential per Month for Logistic Regression** = **$60,920.85 per Month**
-- **Revenue Loss Potential per Month for Catboost Classifier** = **$62,152.20 per Month**
-- **Potential Revenue Earned per Month for Logistic Regression** = **$314,709.04** - **$60,920.85** = **$253,788.19 per Month** 
-- **Potential Revenue Earned per Month for Catboost Classifier** = **$314,709.04** - **$62,152.20** = **$252,556.84 per Month**
+- **Revenue Loss Potential per Month for Gradient Boosting** = **$62,765.15 per Month**
+- **Revenue Loss Potential per Month for LightGBM** = **$48,741.70 per Month**
+- **Potential Revenue Earned per Month for Gradient Boosting** = **$314,709.04** - **$62,765.15** = **$251,943.89 per Month** 
+- **Potential Revenue Earned per Month for LightGBM** = **$314,709.04** - **$48,741.70** = **$265,967.34 per Month**
 
-Although the `Catboost Classifier` has a better precision for Testing for each class, the Business Impact of the `Logistic Regression` model is better because the potential lost revenue is not as large as the `Catboost Classifier`.
+From the Potential Losses and Revenues obtained by the Company, `LightGBM` is truly the best Model because the Potential Losses obtained are smaller and the Potential Revenues obtained are greater than the Prediction results with the `LightGBM` Algorithm Model when compared to `Gradient Boosting` Algorithm Model.
 
 ### Suggestion for the Future Prediction Analysis
 1. **Additional Data**: to Utilize more Business Metrics and Aspects to assess the Business Impact of each selected Best Model, additional data such as Customer Acquisition Cost (CAC), Customer Retention Cost (CRC) and other Financial Data such as Taxes, Interest, Costs (CAC and CRC are two aspects of these Costs) etc. are needed to analyse to see the Business Impact from the aspects of Net Profits, Pricing, and Strategic decisions to improve the Telco's business performance.

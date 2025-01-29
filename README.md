@@ -83,7 +83,7 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 
 # Business Impact Analysis
 **Business Objective** : Reducing the Number of Churn
-<br>Although the percentage of churn rate has decreased after prediction (Actual Data : **26.42%**; Logistic Regression: **19.78%**; Catboost Classifier: **19.86%**), we also need to look at the Business Impact of various Business Metrics after Prediction which is seen from **False Positive (Churn predicted as No Churn)** and **False Negative (No Churn predicted as Churn)*** among others that is **Revenue Loss** to measure the potential loss of Average Revenue from the Prediction results.
+<br>Although the percentage of churn rate has decreased after prediction (Actual Data : **26.42%**; Gradient Boosting: **19.78%**; LightGBM: **21.27%**), we also need to look at the Business Impact of various Business Metrics after Prediction which is seen from **False Positive (Churn predicted as No Churn)** and **False Negative (No Churn predicted as Churn)*** among others that is **Revenue Loss** to measure the potential loss of Average Revenue from the Prediction results.
 
 **Data Provided:**
 1.    Average Monthly Charges (Churn Customer): $74.61 per Month

@@ -44,25 +44,14 @@
 
 # Determine Best Model (Part 1)
 To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `Precision` is the best Metrics to consider the Best Model
-![image](https://github.com/user-attachments/assets/7314e0a9-558d-4197-9e87-6787ea93d0b5)
-
+![image](https://github.com/user-attachments/assets/521e6449-28b7-4b1e-a243-e083cbf90c27)
 
 **Model Selection Result :**
-<br>`Logistic Regression()` chosen as the model because to prevent False Positive (Churn Customer predicted as No Churn Customer) `Logistic Regression()` has the best **Precision** among other Models in the Testing Performance
-<br>
-<br>
-
-- **Best model**: `Gradient Boosting`. Although there is a slight decrease in Class 1 precision in the test set, this model shows a more balanced performance between train and test compared to the overfitting Random Forest.
-
-- **Avoid**: `Random Forest`, as it shows severe overfitting.
-To avoid False Positive, it is necessary to ensure that the precision on Class 1 remains high, even though in some cases (like Random Forest) the test precision for Class 1 is much lower.
-
-- So, `Gradient Boosting` is a more balanced and less overfit option.
+`Logistic Regression` is the best model in this case. It has balanced precision across both classes and shows consistent performance between training and testing, with no significant overfitting or underfitting. While the other models show more pronounced issues with overfitting or imbalanced precision across classes, Logistic Regression maintains a more stable and generalizable performance.
 
 # Determine Best Model (Part 2: with Additional New Models)
 To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `Precision` is the best Metrics to consider the Best Model
-![image](https://github.com/user-attachments/assets/2a753d9c-4e7e-4dba-a150-87c72952f2c6)
-
+![image](https://github.com/user-attachments/assets/cefc46c4-6437-479b-86be-a0fb4d6a57b5)
 
 **Model Selection Result:**
 From the above analysis, `LightGBM` is a good choice as it has a higher precision for Class 1 (churn), a good balance between train and test, and does not show obvious signs of overfitting. The precision on the test is also quite good compared to other models.
@@ -74,8 +63,8 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>![image](https://github.com/user-attachments/assets/e535b023-ba95-41f7-ab98-3d577228c8be)
 <br>
 <br>
-<br> **Number of Churn Customer After Predicted (Gradient Boosting):**
-<br>![image](https://github.com/user-attachments/assets/ad609d84-1443-4bfd-ac1a-b59876acc76e)
+<br> **Number of Churn Customer After Predicted (Logistic Regression):**
+<br>![image](https://github.com/user-attachments/assets/b36aa23e-9103-4ff6-834b-dfe827e66fc6)
 <br>
 <br>
 <br> **Number of Churn Customer After Predicted (LightGBM):**
@@ -83,7 +72,7 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 
 # Business Impact Analysis
 **Business Objective** : Reducing the Number of Churn
-<br>Although the percentage of churn rate has decreased after prediction (Actual Data : **26.42%**; Gradient Boosting: **19.78%**; LightGBM: **21.27%**), we also need to look at the Business Impact of various Business Metrics after Prediction which is seen from **False Positive (Churn predicted as No Churn)** and **False Negative (No Churn predicted as Churn)*** among others that is **Revenue Loss** to measure the potential loss of Average Revenue from the Prediction results.
+<br>Although the percentage of churn rate has decreased after prediction (Actual Data : **26.42%**; Logistic Regression: **19.97%**; LightGBM: **21.27%**), we also need to look at the Business Impact of various Business Metrics after Prediction which is seen from **False Positive (Churn predicted as No Churn)** and **False Negative (No Churn predicted as Churn)*** among others that is **Revenue Loss** to measure the potential loss of Average Revenue from the Prediction results.
 
 **Data Provided:**
 1.    Average Monthly Charges (Churn Customer): $74.61 per Month
@@ -95,10 +84,10 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 ## Business Impact Analysis Implementation
 <br>
 
-**Gradient Boosting**:
-1. False Positive (FP): **FP (Gradient Boosting): 1836 - 1375 = 461**
+**Logistic Regression**:
+1. False Positive (FP): **FP (Logistic Regression): 1836 - 1388 = 448**
 
-2. False Negative (FN): **FN (Gradient Boosting): 5114 - 5575 = 461**
+2. False Negative (FN): **FN (Logistic Regression): 5114 - 5562 = 448**
 
 **Light GBM**:
 1. False Positive (FP): **FP (LightGBM): 1836 - 1478 = 358**
@@ -110,29 +99,29 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>
 
 **False Positive (FP)** means we misidentify a Churn Customer as a Non Churn customer, leading to potential lost revenue. We use Average Monthly Charges (Churn Customer) ($74.61) to calculate Revenue Loss.
-- **Gradient Boosting (FP)**: Revenue Loss FP Logistic = 461 × 74.61 = **$34,395.21 per Month**
+- **Logistic Regression (FP)**: Revenue Loss FP Logistic = 448 × 74.61 = **$33,452.28** per Month**
 - **LightGBM (FP)**: Revenue Loss FP LightGBM = 358 × 74.61 = **$26,710.38 per Month**
 <br>
 
 **False Negative (FN)** means that we are misidentifying customers who are No Churn Customer as Churn Customer, leading to potential lost revenue. We use Average Monthly Charges (No Churn Customer) ($61.54) to calculate Revenue Loss.
-- **Gradient Boosting (FN)**: Revenue Loss FN Logistic = 461 × 61.54 = **$28,369.94 per Month**
+- **Logistic Regression (FN)**: Revenue Loss FN Logistic = 448 × 61.54 = **$27,569.92** per Month**
 - **LightGBM (FN)**: Revenue Loss FN LightGBM = 358 × 61.54 = **$22,031.32 per Month**
 <br>
 
 **Conclusion**:
 <br>
 
-- **Revenue Loss Potential for Gradient Boosting**: **$34,395.21** + **$28,369.94** = **$62,765.15 per Month**
+- **Revenue Loss Potential for Logistic Regression**: **$33,452.28** + **$27,569.92** = **$60,995.20 per Month**
 - **Revenue Loss Potential for LightGBM**: **$26,710.38** + **$22,031.32** = **$48,741.70 per Month**
 
 # Prediction Result Conclusion
 - **Revenue per Month** : **$314,709.04 per Month**
-- **Revenue Loss Potential per Month for Gradient Boosting** = **$62,765.15 per Month**
+- **Revenue Loss Potential per Month for Logistic Regression** = **$60,995.20** per Month**
 - **Revenue Loss Potential per Month for LightGBM** = **$48,741.70 per Month**
-- **Potential Revenue Earned per Month for Gradient Boosting** = **$314,709.04** - **$62,765.15** = **$251,943.89 per Month** 
+- **Potential Revenue Earned per Month for Logistic Regression** = **$314,709.04** - **$60,995.20** = **$253,713.84** per Month** 
 - **Potential Revenue Earned per Month for LightGBM** = **$314,709.04** - **$48,741.70** = **$265,967.34 per Month**
 
-From the Potential Losses and Revenues obtained by the Company, `LightGBM` is truly the best Model because the Potential Losses obtained are smaller and the Potential Revenues obtained are greater than the Prediction results with the `LightGBM` Algorithm Model when compared to `Gradient Boosting` Algorithm Model.
+From the Potential Losses and Revenues obtained by the Company, `LightGBM` is truly the best Model because the Potential Losses obtained are smaller and the Potential Revenues obtained are greater than the Prediction results with the `LightGBM` Algorithm Model when compared to `Logistic Regression` Algorithm Model.
 
 ### Suggestion for the Future Prediction Analysis
 1. **Additional Data**: to Utilize more Business Metrics and Aspects to assess the Business Impact of each selected Best Model, additional data such as Customer Acquisition Cost (CAC), Customer Retention Cost (CRC) and other Financial Data such as Taxes, Interest, Costs (CAC and CRC are two aspects of these Costs) etc. are needed to analyse to see the Business Impact from the aspects of Net Profits, Pricing, and Strategic decisions to improve the Telco's business performance.

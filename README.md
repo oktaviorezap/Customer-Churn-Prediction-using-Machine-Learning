@@ -179,7 +179,7 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 3. **Potential Loss per Month (TN)**: **$84,855.05 per Month**
 4. **Potential Loss per Month (FP)**: **$52,131.70 per Month**
 <br>
-`LightGBM` truly crowns itself as the best Model Algorithm compared to Gradient Boosting in terms of Model Performance. The Monthly Revenue Potential obtained by the Company if it applies `LightGBM` as an Algorithm Model is $283,650.99, $4,392.38 superior to `Gradient Boosting` which only obtains Monthly Revenue Potential of around $279,258.61.
+`LightGBM` truly crowns itself as the best Model Algorithm compared to Gradient Boosting in terms of Model Performance. The Monthly Revenue Potential obtained by the Company if it applies `LightGBM` as an Algorithm Model is $283,650.99, about $4,392.38 more than `Gradient Boosting` which only obtains Potential Monthly Revenue of about $279,258.61.
 
 ### Suggestion for the Future Prediction Analysis
 1. **Additional Data**: to Utilize more Business Metrics and Aspects to assess the Business Impact of each selected Best Model, additional data such as Customer Acquisition Cost (CAC), Customer Retention Cost (CRC) and other Financial Data such as Taxes, Interest, Costs (CAC and CRC are two aspects of these Costs) etc. are needed to analyse to see the Business Impact from the aspects of Net Profits, Pricing, and Strategic decisions to improve the Telco's business performance.

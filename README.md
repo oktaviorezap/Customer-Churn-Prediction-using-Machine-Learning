@@ -228,6 +228,7 @@ The following are business recommendations based on the prediction results of Li
    - For customers with high tenure (>60 months), offer loyalty rewards programs such as cashback or service upgrades at special prices.
    
    📌 Strategy:
+   <br>
        - Segment customers by tenure and create a special retention program.
        - Send emails or notifications with personalized offers to new and loyal customers.
 
@@ -237,6 +238,7 @@ The following are business recommendations based on the prediction results of Li
    - Offer bundling packages (Internet + TV + Phone) at a lower price than if purchased separately.
 
     📌 Strategy:
+   <br>
        - Create discounted bundling packages for customers with limited services.
        - A/B testing to see which package customers are most interested in before broad implementation.
    
@@ -245,6 +247,7 @@ The following are business recommendations based on the prediction results of Li
    - Customers with high fees (MonthlyCharges > $100) can also churn because they feel the service is too expensive.
 
     📌 Strategy:
+   <br>
        - For low-cost customers, offer a discounted upgrade to a more complete plan to keep them loyal.
        - For high-cost customers, offer the option to downgrade certain services so they don't immediately unsubscribe.
 
@@ -253,6 +256,7 @@ The following are business recommendations based on the prediction results of Li
    - Customers with PaperlessBilling = No could be a target to convert to auto-payment, as customers who use auto-payment tend to have lower churn.
 
     📌 Strategy:
+   <br>
        - Offer incentives such as first payment discounts for customers who enable auto-payment.
        - Send reminder notifications to customers who have not activated auto-payment. 
 
@@ -261,5 +265,6 @@ The following are business recommendations based on the prediction results of Li
    - SeniorCitizens may need more assistance in using digital services, so educational programs or more senior-friendly customer support can help.
 
     📌 Strategy:
+   <br>
        - Prioritize customer support services for SeniorCitizen customers.
        - Provide guidance in the form of short, easily accessible videos/tutorials to help them understand the service.

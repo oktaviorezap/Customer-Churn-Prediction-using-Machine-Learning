@@ -167,10 +167,10 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 ## Business Impact Analysis Implementation
 <br>
 
-**True Positive (TP)**: No Churn Customer (Class 0) actually Predicted as No Churn Customer (Class 0) 
-**True Negative (TN)** : Churn Customer (Class 1) actually Predicted as Churn Customer (Class 1)
-**False Positive (FP)**: Churn Customer (Class 1) Predicted as No Churn Customer (Class 0)
-**False Negative (FN)**: No Churn Customer (Class 0) Predicted as Churn Customer (Class 1)
+1. **True Positive (TP)**: No Churn Customer (Class 0) actually Predicted as No Churn Customer (Class 0) 
+2. **True Negative (TN)** : Churn Customer (Class 1) actually Predicted as Churn Customer (Class 1)
+3. **False Positive (FP)**: Churn Customer (Class 1) Predicted as No Churn Customer (Class 0)
+4. **False Negative (FN)**: No Churn Customer (Class 0) Predicted as Churn Customer (Class 1)
 <br>
 
 **Gradient Boosting** (True Positive : 4,662 ; True Negative: 921 ; False Positive: 915 ; False Negative: 452):

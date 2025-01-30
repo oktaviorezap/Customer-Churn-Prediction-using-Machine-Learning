@@ -44,17 +44,100 @@
 
 # Determine Best Model (Part 1)
 To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `Precision` is the best Metrics to consider the Best Model
-![image](https://github.com/user-attachments/assets/521e6449-28b7-4b1e-a243-e083cbf90c27)
+![image](https://github.com/user-attachments/assets/436848e9-9f5f-4489-a74c-bdc82651f8bf)
+
 
 **Model Selection Result :**
-`Logistic Regression` is the best model in this case. It has balanced precision across both classes and shows consistent performance between training and testing, with no significant overfitting or underfitting. While the other models show more pronounced issues with overfitting or imbalanced precision across classes, Logistic Regression maintains a more stable and generalizable performance.
+<br>
+In order to choose the best model based on precision and taking into account that the model is not overfitting or underfitting, we must consider several factors:
+
+- Precision Class 0 (No Churn Customer): Since you want to avoid False Positives in Class 1 (Churn Customer), we need to focus on the precision for Class 0.
+- Precision Class 1 (Churn Customer): Precision is important, but you have already set the focus on avoiding False Positives, so Class 1 precision is also relevant.
+- Comparison between Train and Test: A small gap between training and testing results indicates a model that is neither overfitting (overfit to the training data) nor underfitting (not able to capture the data pattern).
+<br>
+
+- `Gradient Boosting`:
+    - Train Precision Class 0: 0.844296
+    - Train Precision Class 1: 0.702980
+    - Test Precision Class 0: 0.830256
+    - Test Precision Class 1: 0.642857
+    - Gap: Quite small between train and test for both classes, indicating the model is relatively balanced. Precision Class 0 in both train and test remains high.
+
+- `Random Forest`:
+
+    - Train Precision Class 0: 0.995262
+    - Train Precision Class 1: 0.996868
+    - Test Precision Class 0: 0.824423
+    - Test Precision Class 1: 0.585421
+    - Gap: Precision in train is very high compared to test, especially for Class 0. This indicates possible overfitting. The model fit the training data very well, but not well enough in the test data.
+
+- `Logistic Regression`:
+
+    - Train Precision Class 0: 0.832351
+    - Train Precision Class 1: 0.659751
+    - Test Precision Class 0: 0.827976
+    - Test Precision Class 1: 0.634568
+    - Gap: The gap between train and test is very small, indicating a fairly balanced model and neither overfitting nor underfitting. Precision for Class 0 in both train and test remains high.
+<br>
+
+**Conclusion:**
+- `Gradient Boosting` seems to be the best model based on its high precision for Class 0 and small gap between train and test. The model is able to maintain a balance without overfitting or underfitting.
+- `Random Forest` showed overfitting, with a large gap between train and test, making it less ideal to use.
+- `Logistic Regression` shows good balance, although the precision for Class 0 is slightly lower than Gradient Boosting, the small gap shows the stability of this model.
+
+So, the `Gradient Boosting` model is the best choice for this case.
 
 # Determine Best Model (Part 2: with Additional New Models)
 To Prevent **False Positive (Churn Customer predicted as No Churn Customer)**, `Precision` is the best Metrics to consider the Best Model
-![image](https://github.com/user-attachments/assets/cefc46c4-6437-479b-86be-a0fb4d6a57b5)
+![image](https://github.com/user-attachments/assets/116df3ce-f6be-4a8b-8e85-de9eab176c44)
+
 
 **Model Selection Result:**
-From the above analysis, `LightGBM` is a good choice as it has a higher precision for Class 1 (churn), a good balance between train and test, and does not show obvious signs of overfitting. The precision on the test is also quite good compared to other models.
+<br>
+From the given data, we can see a model that has a balanced performance between training and testing with a slight difference (small gap) in precision for each class (Class 0 and Class 1). We also want to make sure the model is not overfitting (fits the training data too well) or underfitting (does not learn well).
+
+Some models that meet these criteria are:
+- `LightGBM`
+
+    - Precision Train (Class 0): 0.881627
+    - Precision Train (Class 1): 0.795261
+    - Precision Test (Class 0): 0.835848
+    - Precision Test (Class 1): 0.640187
+
+    - Reason:
+      - Precision in train and test is quite balanced, although there is a slight decrease in test data, but the gap is not too large (thus indicating no overfitting).
+      - Precision Class 0 and Class 1 are still quite good in both data sets.
+
+- `CatBoost`
+
+    - Precision Train (Class 0): 0.840235
+    - Precision Train (Class 1): 0.697796
+    - Precision Test (Class 0): 0.831461
+    - Precision Test (Class 1): 0.662437
+
+    - Reason: Precision is relatively balanced between train and test, although there is a slight decrease in test data. The gap between train and test is still acceptable.
+
+- `Gradient Boosting`
+
+    - Precision Train (Class 0): 0.844296
+    - Precision Train (Class 1): 0.702980
+    - Precision Test (Class 0): 0.830256
+    - Precision Test (Class 1): 0.642857
+
+    - Reason: Precision is fairly balanced between train and test, with a small gap between the two datasets.
+<br>
+
+By prioritizing Precision for Class 1 (Churn Customers), you aim to ensure that when a customer is predicted to churn (Class 1), the prediction is accurate and there are few False Positives (customers who actually Churn but are predicted as No Churn, Class 0).
+
+So, in this case, you're focusing on precision for Class 1 (Churn), where you care about making fewer mistakes in predicting customers who churn, even if it means sacrificing a bit of recall or detecting fewer customers who might churn.
+
+Given this, let's reassess the models based on Class 1 precision:
+- `LightGBM` has the highest precision for Class 1 (Churn) in the training set (0.795261), and while its test precision for Class 1 is also good (0.640187), it is still one of the better choices. The gap between training and testing is not too large, indicating it is a balanced model.
+
+- `CatBoost` also does quite well with Class 1 precision (training precision of 0.697796 and testing precision of 0.662437). But the slight drop from training to test precision is greater than LightGBM, which might signal more variability in its performance.
+<br>
+
+Thus, despite `CatBoost` being a strong contender, `LightGBM` stands out as the most balanced option for your goal of minimizing False Positives for Churn Customers.
 
 # Prediction Result
 Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/(Full_Code)_DQLab_Customer_Churn_Prediction_Using_Machine_Learning.ipynb)
@@ -63,16 +146,16 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>![image](https://github.com/user-attachments/assets/e535b023-ba95-41f7-ab98-3d577228c8be)
 <br>
 <br>
-<br> **Number of Churn Customer After Predicted (Logistic Regression):**
-<br>![image](https://github.com/user-attachments/assets/b36aa23e-9103-4ff6-834b-dfe827e66fc6)
+<br> **Number of Churn Customer After Predicted (Gradient Boosting):**
+<br>![image](https://github.com/user-attachments/assets/2eacd050-3265-420f-b7fc-a3d8e2a4b49d)
 <br>
 <br>
 <br> **Number of Churn Customer After Predicted (LightGBM):**
-<br>![image](https://github.com/user-attachments/assets/3e83256a-2fe1-45f8-a185-c4da2414b8a7)
+<br>![image](https://github.com/user-attachments/assets/9e770729-7063-431f-9ca5-01f793ba361e)
 
 # Business Impact Analysis
 **Business Objective** : Reducing the Number of Churn
-<br>Although the percentage of churn rate has decreased after prediction (Actual Data : **26.42%**; Logistic Regression: **19.97%**; LightGBM: **21.27%**), we also need to look at the Business Impact of various Business Metrics after Prediction which is seen from **False Positive (Churn predicted as No Churn)** and **False Negative (No Churn predicted as Churn)*** among others that is **Revenue Loss** to measure the potential loss of Average Revenue from the Prediction results.
+<br>Although the percentage of churn rate has decreased after prediction (Actual Data : **26.42%**; Gradient Boosting: **19.76%**; LightGBM: **21.27%**), we also need to look at the Business Impact of various Business Metrics after Prediction which is seen from **False Positive (Churn predicted as No Churn)** and **False Negative (No Churn predicted as Churn)*** among others that is **Revenue Loss** to measure the potential loss of Average Revenue from the Prediction results.
 
 **Data Provided:**
 1.    Average Monthly Charges (Churn Customer): $74.61 per Month
@@ -84,10 +167,10 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 ## Business Impact Analysis Implementation
 <br>
 
-**Logistic Regression**:
-1. False Positive (FP): **FP (Logistic Regression): 1836 - 1388 = 448**
+**Gradient Boosting**:
+1. False Positive (FP): **FP (Gradient Boosting): 1836 - 1388 = 448**
 
-2. False Negative (FN): **FN (Logistic Regression): 5114 - 5562 = 448**
+2. False Negative (FN): **FN (Gradient Boosting): 5114 - 5562 = 448**
 
 **Light GBM**:
 1. False Positive (FP): **FP (LightGBM): 1836 - 1478 = 358**
@@ -99,26 +182,26 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>
 
 **False Positive (FP)** means we misidentify a Churn Customer as a Non Churn customer, leading to potential lost revenue. We use Average Monthly Charges (Churn Customer) ($74.61) to calculate Revenue Loss.
-- **Logistic Regression (FP)**: Revenue Loss FP Logistic = 448 × 74.61 = **$33,452.28** per Month**
+- **Gradient Boosting (FP)**: Revenue Loss FP Logistic = 448 × 74.61 = **$33,452.28** per Month**
 - **LightGBM (FP)**: Revenue Loss FP LightGBM = 358 × 74.61 = **$26,710.38 per Month**
 <br>
 
 **False Negative (FN)** means that we are misidentifying customers who are No Churn Customer as Churn Customer, leading to potential lost revenue. We use Average Monthly Charges (No Churn Customer) ($61.54) to calculate Revenue Loss.
-- **Logistic Regression (FN)**: Revenue Loss FN Logistic = 448 × 61.54 = **$27,569.92** per Month**
+- **Gradient Boosting (FN)**: Revenue Loss FN Logistic = 448 × 61.54 = **$27,569.92** per Month**
 - **LightGBM (FN)**: Revenue Loss FN LightGBM = 358 × 61.54 = **$22,031.32 per Month**
 <br>
 
 **Conclusion**:
 <br>
 
-- **Revenue Loss Potential for Logistic Regression**: **$33,452.28** + **$27,569.92** = **$60,995.20 per Month**
+- **Revenue Loss Potential for Gradient Boosting**: **$33,452.28** + **$27,569.92** = **$60,995.20 per Month**
 - **Revenue Loss Potential for LightGBM**: **$26,710.38** + **$22,031.32** = **$48,741.70 per Month**
 
 # Prediction Result Conclusion
 - **Revenue per Month** : **$314,709.04 per Month**
-- **Revenue Loss Potential per Month for Logistic Regression** = **$60,995.20** per Month**
+- **Revenue Loss Potential per Month for Gradient Boosting** = **$60,995.20** per Month**
 - **Revenue Loss Potential per Month for LightGBM** = **$48,741.70 per Month**
-- **Potential Revenue Earned per Month for Logistic Regression** = **$314,709.04** - **$60,995.20** = **$253,713.84** per Month** 
+- **Potential Revenue Earned per Month for Gradient Boosting** = **$314,709.04** - **$60,995.20** = **$253,713.84** per Month** 
 - **Potential Revenue Earned per Month for LightGBM** = **$314,709.04** - **$48,741.70** = **$265,967.34 per Month**
 
 From the Potential Losses and Revenues obtained by the Company, `LightGBM` is truly the best Model because the Potential Losses obtained are smaller and the Potential Revenues obtained are greater than the Prediction results with the `LightGBM` Algorithm Model when compared to `Logistic Regression` Algorithm Model.

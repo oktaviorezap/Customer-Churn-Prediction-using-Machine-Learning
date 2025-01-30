@@ -143,7 +143,7 @@ Thus, despite `CatBoost` being a strong contender, `LightGBM` stands out as the 
 Full Code : [Python - Customer Churn Prediction using Machine Learning](https://github.com/oktaviorezap/Customer-Churn-Prediction-using-Machine-Learning/blob/main/(Full_Code)_DQLab_Customer_Churn_Prediction_Using_Machine_Learning.ipynb)
 <br>
 <br> **Number of Churn Customer Before Predicted:**
-<br>![image](https://github.com/user-attachments/assets/e535b023-ba95-41f7-ab98-3d577228c8be)
+<br>![image](https://github.com/user-attachments/assets/aae9755c-0663-4575-a6f5-eb4874f62c1b)
 <br>
 <br>
 <br> **Number of Churn Customer After Predicted (Gradient Boosting):**
@@ -155,9 +155,9 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 
 # Business Impact Analysis
 **Business Objective** : Reducing the Number of Churn
-<br>Although the percentage of churn rate has decreased after prediction (Actual Data : **26.42%**; Gradient Boosting: **19.76%**; LightGBM: **21.27%**), we also need to look at the Business Impact of various Business Metrics after Prediction which is seen from **False Positive (Churn predicted as No Churn)** and **False Negative (No Churn predicted as Churn)*** among others that is **Revenue Loss** to measure the potential loss of Average Revenue from the Prediction results.
+<br>Although the percentage of churn rate has decreased after prediction (Actual Data : **26.42%**; Gradient Boosting: **19.76%**; LightGBM: **21.27%**), we also need to look at the Business Impact of various Business Metrics after Prediction which is seen from **False Positive (Churn predicted as No Churn)** and **False Negative (No Churn predicted as Churn)*** among others that is **Potential Revenue / Loss** to measure the potential Revenue / Loss by Prediction Result.
 
-**Data Provided:**
+**Data Provided (Actual Data):**
 1.    Average Monthly Charges (Churn Customer): $74.61 per Month
 2.    Average Monthly Bill (No Churn Customers): $61.54 per Month
 3.    Average Length of Stay (Churn Customers): 17.99 Months
@@ -167,44 +167,18 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 ## Business Impact Analysis Implementation
 <br>
 
-**Gradient Boosting**:
-1. False Positive (FP): **FP (Gradient Boosting): 1836 - 1388 = 448**
+**Gradient Boosting** (True Positive : 4,662 ; True Negative: 921 ; False Positive: 915 ; False Negative: 452):
+1. **Potential Revenue per Month (TP)**: **$279,258.61 per Month**
+2. **Potential Revenue per Month (FN)**: **$35,450.43 per Month**
+3. **Potential Loss per Month (TN)**: **$73,260.60 per Month**
+4. **Potential Loss per Month (FP)**: **$63,726.15 per Month**
 
-2. False Negative (FN): **FN (Gradient Boosting): 5114 - 5562 = 448**
-
-**Light GBM**:
-1. False Positive (FP): **FP (LightGBM): 1836 - 1478 = 358**
-
-2. False Negative (FN): **FN (LightGBM): 5114 - 5472 = 358**
+**Light GBM**(True Positive: 4,716 ; True Negative: 1,080 ; False Positive: 756 ; False Negative: 398):
+1. **Potential Revenue per Month (TP)**: **$283,650.99 per Month**
+2. **Potential Revenue per Month (FN)**: **$31,058.05 per Month**
+3. **Potential Loss per Month (TN)**: **$84,855.05 per Month**
+4. **Potential Loss per Month (FP)**: **$52,131.70 per Month**
 <br>
-
-### Revenue Loss Potential
-<br>
-
-**False Positive (FP)** means we misidentify a Churn Customer as a Non Churn customer, leading to potential lost revenue. We use Average Monthly Charges (Churn Customer) ($74.61) to calculate Revenue Loss.
-- **Gradient Boosting (FP)**: Revenue Loss FP Logistic = 448 × 74.61 = **$33,452.28** per Month**
-- **LightGBM (FP)**: Revenue Loss FP LightGBM = 358 × 74.61 = **$26,710.38 per Month**
-<br>
-
-**False Negative (FN)** means that we are misidentifying customers who are No Churn Customer as Churn Customer, leading to potential lost revenue. We use Average Monthly Charges (No Churn Customer) ($61.54) to calculate Revenue Loss.
-- **Gradient Boosting (FN)**: Revenue Loss FN Logistic = 448 × 61.54 = **$27,569.92** per Month**
-- **LightGBM (FN)**: Revenue Loss FN LightGBM = 358 × 61.54 = **$22,031.32 per Month**
-<br>
-
-**Conclusion**:
-<br>
-
-- **Revenue Loss Potential for Gradient Boosting**: **$33,452.28** + **$27,569.92** = **$60,995.20 per Month**
-- **Revenue Loss Potential for LightGBM**: **$26,710.38** + **$22,031.32** = **$48,741.70 per Month**
-
-# Prediction Result Conclusion
-- **Revenue per Month** : **$314,709.04 per Month**
-- **Revenue Loss Potential per Month for Gradient Boosting** = **$60,995.20** per Month**
-- **Revenue Loss Potential per Month for LightGBM** = **$48,741.70 per Month**
-- **Potential Revenue Earned per Month for Gradient Boosting** = **$314,709.04** - **$60,995.20** = **$253,713.84** per Month** 
-- **Potential Revenue Earned per Month for LightGBM** = **$314,709.04** - **$48,741.70** = **$265,967.34 per Month**
-
-From the Potential Losses and Revenues obtained by the Company, `LightGBM` is truly the best Model because the Potential Losses obtained are smaller and the Potential Revenues obtained are greater than the Prediction results with the `LightGBM` Algorithm Model when compared to `Logistic Regression` Algorithm Model.
 
 ### Suggestion for the Future Prediction Analysis
 1. **Additional Data**: to Utilize more Business Metrics and Aspects to assess the Business Impact of each selected Best Model, additional data such as Customer Acquisition Cost (CAC), Customer Retention Cost (CRC) and other Financial Data such as Taxes, Interest, Costs (CAC and CRC are two aspects of these Costs) etc. are needed to analyse to see the Business Impact from the aspects of Net Profits, Pricing, and Strategic decisions to improve the Telco's business performance.

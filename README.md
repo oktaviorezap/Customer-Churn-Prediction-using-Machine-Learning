@@ -189,7 +189,6 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 `LightGBM` truly crowns itself as the best Model Algorithm compared to Gradient Boosting in terms of Model Performance. The Monthly Revenue Potential obtained by the Company if it applies `LightGBM` as an Algorithm Model is $283,650.99, about $4,392.38 more than `Gradient Boosting` which only obtains Potential Monthly Revenue of about $279,258.61.
 <br>
 
-**Business Recommendation:**
 ### Suggestion for the Future Prediction Analysis
 1. **Additional Data**: to Utilize more Business Metrics and Aspects to assess the Business Impact of each selected Best Model, additional data such as Customer Acquisition Cost (CAC), Customer Retention Cost (CRC) and other Financial Data such as Taxes, Interest, Costs (CAC and CRC are two aspects of these Costs) etc. are needed to analyse to see the Business Impact from the aspects of Net Profits, Pricing, and Strategic decisions to improve the Telco's business performance.
 2. **Overcoming Class Imbalance**: Implement oversampling (such as SMOTE) or undersampling techniques to correct class imbalance.
@@ -201,3 +200,66 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 <br>
 With these steps, future churn predictions can be more accurate and more focused on customers at risk of churn.
 
+# Business Recommendation
+The following are business recommendations based on the prediction results of LightGBM and Gradient Boosting related to potential revenue and losses from False Positives (FP) and False Negatives (FN):
+1. Optimizing Customer Retention (Suppressing FN)
+   - Issue:
+       - FN (False Negatives) are customers who do not actually churn, but are predicted to churn.
+       - If left unchecked, companies can provide unnecessary incentives to customers who are not at risk of churn.
+
+    - Recommendation:
+        - **Customer Segmentation**: Identify customers who are FNs and look at their patterns. For example, do they have a history of regular payments or high loyalty?
+        - **Cost-Effective Retention Strategies**: Don't be too aggressive in providing discounts or incentives to this group, but keep engaging with loyalty programs, new features, or personalized offers.
+        - **Model Adjustment**: Fine-tune the model to more accurately differentiate between customers who actually churn and those who only look like they will churn.
+2. Upselling and Cross-Selling Strategy (Converting FP)
+   - Issue:
+       - FPs (False Positives) are customers who will actually churn, but are predicted not to churn.
+       - If left unchecked, they can be lost without the company realizing it because they are considered loyal customers.
+
+    - Recommendation:
+        - **Proactive Engagement**: Build a proactive communication program for FP customers, for example with emails, app notifications, or call centers to find out their needs.
+        - **Upsell & Cross-Sell**: Provide additional product/service recommendations that are relevant to their habits. For example, if they subscribe to a basic plan, offer them an upgrade with a special discount.
+        - **Exclusive Offers & Retention Deals**: Offer exclusive deals such as cashback, vouchers, or free trials of premium features to increase their engagement before they churn.
+
+## Business Recommendation (Implementation)
+1. Retention Program Based on Tenure
+   - Customers with low tenure (1-12 months) tend to have higher churn.
+   - Provide onboarding incentives such as discounts within the first month, free additional features, or education on the benefits of the service to keep customers sticking around longer.
+   - For customers with high tenure (>60 months), offer loyalty rewards programs such as cashback or service upgrades at special prices.
+   
+   📌 Strategy:
+       - Segment customers by tenure and create a special retention program.
+       - Send emails or notifications with personalized offers to new and loyal customers.
+
+2. Bundling & Cross-Selling Additional Services (StreamingTV, Internet, Phone)
+   - Some customers only use PhoneService or StreamingTV without Internet.
+   - Customers who have more than one service tend to be more loyal than those who only use one service.
+   - Offer bundling packages (Internet + TV + Phone) at a lower price than if purchased separately.
+
+    📌 Strategy:
+       - Create discounted bundling packages for customers with limited services.
+       - A/B testing to see which package customers are most interested in before broad implementation.
+   
+3. Price Adjustment Strategy Based on MonthlyCharges & TotalCharges
+   - Customers with low monthly fees (MonthlyCharges < $30) are at risk of churn because they may find the service less useful.
+   - Customers with high fees (MonthlyCharges > $100) can also churn because they feel the service is too expensive.
+
+    📌 Strategy:
+       - For low-cost customers, offer a discounted upgrade to a more complete plan to keep them loyal.
+       - For high-cost customers, offer the option to downgrade certain services so they don't immediately unsubscribe.
+
+4. PaperlessBilling & Payment Automation Analysis
+   - Customers with PaperlessBilling = Yes may be more comfortable with payment automation.
+   - Customers with PaperlessBilling = No could be a target to convert to auto-payment, as customers who use auto-payment tend to have lower churn.
+
+    📌 Strategy:
+       - Offer incentives such as first payment discounts for customers who enable auto-payment.
+       - Send reminder notifications to customers who have not activated auto-payment. 
+
+5. Proactive Customer Support for SeniorCitizens
+   - If a pattern is found that SeniorCitizens have high churn, then a special approach can be taken to increase their engagement.
+   - SeniorCitizens may need more assistance in using digital services, so educational programs or more senior-friendly customer support can help.
+
+    📌 Strategy:
+       - Prioritize customer support services for SeniorCitizen customers.
+       - Provide guidance in the form of short, easily accessible videos/tutorials to help them understand the service.

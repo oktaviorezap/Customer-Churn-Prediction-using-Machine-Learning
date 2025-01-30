@@ -167,6 +167,12 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 ## Business Impact Analysis Implementation
 <br>
 
+**True Positive (TP)**: No Churn Customer (Class 0) actually Predicted as No Churn Customer (Class 0) 
+**True Negative (TN)** : Churn Customer (Class 1) actually Predicted as Churn Customer (Class 1)
+**False Positive (FP)**: Churn Customer (Class 1) Predicted as No Churn Customer (Class 0)
+**False Negative (FN)**: No Churn Customer (Class 0) Predicted as Churn Customer (Class 1)
+<br>
+
 **Gradient Boosting** (True Positive : 4,662 ; True Negative: 921 ; False Positive: 915 ; False Negative: 452):
 1. **Potential Revenue per Month (TP)**: **$279,258.61 per Month**
 2. **Potential Loss per Month (FN)**: **$35,450.43 per Month**
@@ -180,7 +186,9 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 4. **Potential Loss per Month (FP)**: **$52,131.70 per Month**
 <br>
 `LightGBM` truly crowns itself as the best Model Algorithm compared to Gradient Boosting in terms of Model Performance. The Monthly Revenue Potential obtained by the Company if it applies `LightGBM` as an Algorithm Model is $283,650.99, about $4,392.38 more than `Gradient Boosting` which only obtains Potential Monthly Revenue of about $279,258.61.
+<br>
 
+**Business Recommendation:**
 ### Suggestion for the Future Prediction Analysis
 1. **Additional Data**: to Utilize more Business Metrics and Aspects to assess the Business Impact of each selected Best Model, additional data such as Customer Acquisition Cost (CAC), Customer Retention Cost (CRC) and other Financial Data such as Taxes, Interest, Costs (CAC and CRC are two aspects of these Costs) etc. are needed to analyse to see the Business Impact from the aspects of Net Profits, Pricing, and Strategic decisions to improve the Telco's business performance.
 2. **Overcoming Class Imbalance**: Implement oversampling (such as SMOTE) or undersampling techniques to correct class imbalance.

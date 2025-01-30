@@ -185,6 +185,7 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 3. **Potential Loss per Month (TN)**: **$84,855.05 per Month**
 4. **Potential Loss per Month (FP)**: **$52,131.70 per Month**
 <br>
+
 `LightGBM` truly crowns itself as the best Model Algorithm compared to Gradient Boosting in terms of Model Performance. The Monthly Revenue Potential obtained by the Company if it applies `LightGBM` as an Algorithm Model is $283,650.99, about $4,392.38 more than `Gradient Boosting` which only obtains Potential Monthly Revenue of about $279,258.61.
 <br>
 

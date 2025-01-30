@@ -169,13 +169,13 @@ Full Code : [Python - Customer Churn Prediction using Machine Learning](https://
 
 **Gradient Boosting** (True Positive : 4,662 ; True Negative: 921 ; False Positive: 915 ; False Negative: 452):
 1. **Potential Revenue per Month (TP)**: **$279,258.61 per Month**
-2. **Potential Revenue per Month (FN)**: **$35,450.43 per Month**
+2. **Potential Loss per Month (FN)**: **$35,450.43 per Month**
 3. **Potential Loss per Month (TN)**: **$73,260.60 per Month**
 4. **Potential Loss per Month (FP)**: **$63,726.15 per Month**
 
 **Light GBM**(True Positive: 4,716 ; True Negative: 1,080 ; False Positive: 756 ; False Negative: 398):
 1. **Potential Revenue per Month (TP)**: **$283,650.99 per Month**
-2. **Potential Revenue per Month (FN)**: **$31,058.05 per Month**
+2. **Potential Loss per Month (FN)**: **$31,058.05 per Month**
 3. **Potential Loss per Month (TN)**: **$84,855.05 per Month**
 4. **Potential Loss per Month (FP)**: **$52,131.70 per Month**
 <br>

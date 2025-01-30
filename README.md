@@ -229,42 +229,42 @@ The following are business recommendations based on the prediction results of Li
    
    📌 Strategy:
    <br>
-       - Segment customers by tenure and create a special retention program.
-       - Send emails or notifications with personalized offers to new and loyal customers.
+   - Segment customers by tenure and create a special retention program.
+   - Send emails or notifications with personalized offers to new and loyal customers.
 
-2. Bundling & Cross-Selling Additional Services (StreamingTV, Internet, Phone)
+3. Bundling & Cross-Selling Additional Services (StreamingTV, Internet, Phone)
    - Some customers only use PhoneService or StreamingTV without Internet.
    - Customers who have more than one service tend to be more loyal than those who only use one service.
    - Offer bundling packages (Internet + TV + Phone) at a lower price than if purchased separately.
 
     📌 Strategy:
    <br>
-       - Create discounted bundling packages for customers with limited services.
-       - A/B testing to see which package customers are most interested in before broad implementation.
+   - Create discounted bundling packages for customers with limited services.
+   - A/B testing to see which package customers are most interested in before broad implementation.
    
-3. Price Adjustment Strategy Based on MonthlyCharges & TotalCharges
+4. Price Adjustment Strategy Based on MonthlyCharges & TotalCharges
    - Customers with low monthly fees (MonthlyCharges < $30) are at risk of churn because they may find the service less useful.
    - Customers with high fees (MonthlyCharges > $100) can also churn because they feel the service is too expensive.
 
     📌 Strategy:
    <br>
-       - For low-cost customers, offer a discounted upgrade to a more complete plan to keep them loyal.
-       - For high-cost customers, offer the option to downgrade certain services so they don't immediately unsubscribe.
+   - For low-cost customers, offer a discounted upgrade to a more complete plan to keep them loyal.
+   - For high-cost customers, offer the option to downgrade certain services so they don't immediately unsubscribe.
 
-4. PaperlessBilling & Payment Automation Analysis
+5. PaperlessBilling & Payment Automation Analysis
    - Customers with PaperlessBilling = Yes may be more comfortable with payment automation.
    - Customers with PaperlessBilling = No could be a target to convert to auto-payment, as customers who use auto-payment tend to have lower churn.
 
     📌 Strategy:
    <br>
-       - Offer incentives such as first payment discounts for customers who enable auto-payment.
-       - Send reminder notifications to customers who have not activated auto-payment. 
+   - Offer incentives such as first payment discounts for customers who enable auto-payment.
+   - Send reminder notifications to customers who have not activated auto-payment. 
 
-5. Proactive Customer Support for SeniorCitizens
+6. Proactive Customer Support for SeniorCitizens
    - If a pattern is found that SeniorCitizens have high churn, then a special approach can be taken to increase their engagement.
    - SeniorCitizens may need more assistance in using digital services, so educational programs or more senior-friendly customer support can help.
 
     📌 Strategy:
    <br>
-       - Prioritize customer support services for SeniorCitizen customers.
-       - Provide guidance in the form of short, easily accessible videos/tutorials to help them understand the service.
+   - Prioritize customer support services for SeniorCitizen customers.
+   - Provide guidance in the form of short, easily accessible videos/tutorials to help them understand the service.
